@@ -4,15 +4,20 @@ Orientações gerais sobre o projeto [aqui](https://gdoc.pub/doc/e/2PACX-1vTp3jQ
 ## [nome do projeto]
 [insira uma breve descrição da proposta]
 
+### Equipe
+- nome 1
+- nome 2
+- ...
+
 ### Requisitos
 - versão do Java
 - dependências (bibliotecas utilizadas, etc)
 
-## Funcionalidades
+### Funcionalidades
 [insira uma descrição básica das funcionalidades do sistema]
 
-## Diagrama de Classes
+### Diagrama de Classes
 [insira o diagrama de classes do sistema]
 
-## Implantação
+### Implantação
 [orientações gerais de como executar o sistema (arquivos de configuração, argumentos de linha de comando, etc.)]
