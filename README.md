@@ -18,7 +18,7 @@ Um programa que auxilia o usuário com seus gastos (sejam mensais ou semanais), 
 [insira uma descrição básica das funcionalidades do sistema]
 
 ### Diagrama de Classes
-[insira o diagrama de classes do sistema]
+Veja o diagrama [aqui](https://drive.google.com/open?id=1Kw6sCO58WSWLJaHjhRSvFPlW9I01e320)
 
 ### Implantação
 [orientações gerais de como executar o sistema (arquivos de configuração, argumentos de linha de comando, etc.)]
