@@ -10,43 +10,53 @@ public class Boleto
     private double valor;
 
 
-    public String getNomeDoBoleto() {
+    public String getNomeDoBoleto()
+    {
         return nomeDoBoleto;
     }
 
-    public void setNomeDoBoleto(String nomeDoBoleto) {
+    public void setNomeDoBoleto(String nomeDoBoleto)
+    {
         this.nomeDoBoleto = nomeDoBoleto;
     }
 
-    public Date getDataDeCriacao() {
+    public Date getDataDeCriacao()
+    {
         return dataDeCriacao;
     }
 
-    public void setDataDeCriacao(Date dataDeCriacao) {
+    public void setDataDeCriacao(Date dataDeCriacao)
+    {
         this.dataDeCriacao = dataDeCriacao;
     }
 
-    public Date getDataDeVencimento() {
+    public Date getDataDeVencimento()
+    {
         return dataDeVencimento;
     }
 
-    public void setDataDeVencimento(Date dataDeVencimento) {
+    public void setDataDeVencimento(Date dataDeVencimento)
+    {
         this.dataDeVencimento = dataDeVencimento;
     }
 
-    public boolean isPagamento() {
+    public boolean isPagamento()
+    {
         return pagamento;
     }
 
-    public void setPagamento(boolean pagamento) {
+    public void setPagamento(boolean pagamento)
+    {
         this.pagamento = pagamento;
     }
 
-    public double getValor() {
+    public double getValor()
+    {
         return valor;
     }
 
-    public void setValor(double valor) {
+    public void setValor(double valor)
+    {
         this.valor = valor;
     }
 }
