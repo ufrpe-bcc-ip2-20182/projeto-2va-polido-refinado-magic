@@ -61,8 +61,25 @@ public class Conta extends Pessoa
         this.status = status;
     }
 
+    public Conta()
+    {
+        this.setNome("Nome");
+        this.setCpf("000.000.000-78");
+        SimpleDateFormat h = new SimpleDateFormat("dd/MM/yyyy");
+        Date aux = null;
+        try
+        {
+            aux = h.parse("00/00/0000");
+        }
+        catch (ParseException x)
+        {
+            //Salvar erro em arquivo, sei lá
+        }
+        this.setDatadenascimento(aux);
+    }
+
     @Override
-    public void Cadastro()
+    public void cadastro()
     {
         System.out.print("Digite seu nome: ");
         Scanner scanner = new Scanner(System.in);
@@ -83,26 +100,38 @@ public class Conta extends Pessoa
         this.setDatadenascimento(data);
     }
 
+    public boolean login()
+    {
+        return true;
+    }
 
     private Date dataDeCriacao;
     private double saldo;
     private boolean status;
     private ArrayList<Boleto> boletos;
 
-    public Conta()
+    public boolean pagarBoleto(Boleto bol)
     {
-        this.setNome("Nome");
-        this.setCpf("000.000.000-78");
-        SimpleDateFormat h = new SimpleDateFormat("dd/MM/yyyy");
-        Date aux = null;
-        try
+        //vai ter um monte de condição pra ver se isso vai dar certo. Se der tudo certo, retorna true. Lá onde isso for
+        //chamado vammos ter uma verificação se deu tudo certo. Se não der, aborta tudo e relata o erro!
+        return true;
+    }
+
+    public boolean adicionarBoleto(Boleto bol)
+    {
+        boletos.add(bol);
+        //vai ter um monte de condição pra ver se isso vai dar certo. Se der tudo certo, retorna true. Lá onde isso for
+        //chamado vammos ter uma verificação se deu tudo certo. Se não der, aborta tudo e relata o erro!
+        return true;
+    }
+
+    public void mostrarPendencias()
+    {
+        for(Boleto aux: boletos)
         {
-            aux = h.parse("00/00/0000");
+            int i = 1;
+            System.out.println("Pendencia: " + i + ": " + aux.getNomeDoBoleto());
+            System.out.println("Data de vencimento do boleto: " + aux.getDataDeVencimento());
         }
-        catch (ParseException x)
-        {
-            //Salvar erro em arquivo, sei lá
-        }
-        this.setDatadenascimento(aux);
     }
 }

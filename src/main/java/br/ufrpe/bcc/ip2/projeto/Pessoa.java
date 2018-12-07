@@ -53,7 +53,7 @@ public class Pessoa
         this.nome = nome;
     }
 
-    public void Cadastro()
+    public void cadastro()
     {
 
     }
