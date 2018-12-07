@@ -53,28 +53,9 @@ public class Pessoa
         this.nome = nome;
     }
 
-    public Conta Cadastro(){
-        Conta conta = new Conta();
-        System.out.print("Digite seu nome: ");
-        Scanner scanner = new Scanner(System.in);
-        conta.setNome(scanner.nextLine());
-        System.out.print("Digite seu cpf: ");
-        conta.setCpf(scanner.nextLine());
-        System.out.print("Digite sua Data de Nascimento (formato 'dd/mm/aaaa'): ");
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date data = null;
-        try
-        {
-            data = dateFormat.parse(scanner.nextLine());
-        }
-        catch (ParseException x)
-        {
-            //Salvar erro em arquivo, sei lá
-        }
-        conta.setDatadenascimento(data);
-        System.out.println(data);
-        System.out.println("Data normal: " + dateFormat.format(data));
-        return conta;
+    public void Cadastro()
+    {
+
     }
     public Pessoa()
     {
