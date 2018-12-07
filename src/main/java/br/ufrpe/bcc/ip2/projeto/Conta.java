@@ -1,7 +1,10 @@
 package br.ufrpe.bcc.ip2.projeto;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Conta extends Pessoa
 {
@@ -58,13 +61,48 @@ public class Conta extends Pessoa
         this.status = status;
     }
 
+    @Override
+    public void Cadastro()
+    {
+        System.out.print("Digite seu nome: ");
+        Scanner scanner = new Scanner(System.in);
+        this.setNome(scanner.nextLine());
+        System.out.print("Digite seu cpf: ");
+        this.setCpf(scanner.nextLine());
+        System.out.print("Digite sua Data de Nascimento (formato 'dd/mm/aaaa'): ");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date data = null;
+        try
+        {
+            data = dateFormat.parse(scanner.nextLine());
+        }
+        catch (ParseException x)
+        {
+            //Salvar erro em arquivo, sei lá
+        }
+        this.setDatadenascimento(data);
+    }
+
+
     private Date dataDeCriacao;
     private double saldo;
     private boolean status;
-    //private ArrayList<Boletos> boletos;
+    private ArrayList<Boleto> boletos;
 
     public Conta()
     {
-
+        this.setNome("Nome");
+        this.setCpf("000.000.000-78");
+        SimpleDateFormat h = new SimpleDateFormat("dd/MM/yyyy");
+        Date aux = null;
+        try
+        {
+            aux = h.parse("00/00/0000");
+        }
+        catch (ParseException x)
+        {
+            //Salvar erro em arquivo, sei lá
+        }
+        this.setDatadenascimento(aux);
     }
 }
