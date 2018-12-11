@@ -53,6 +53,37 @@ public abstract class Verif
         }
     }
 
+
+    /*public static boolean verificarcpf(String texto)
+    {
+        String cortado[] = new String[texto.length()];
+        for(int i = 0; i < texto.length(); i++)
+        {
+                if(i == 3 || i == 7)
+                {
+                    if(!(cortado[i] == "."))
+                    {
+                        return false;
+                    }
+                }
+                else if(i == 11)
+                {
+                    if(!(cortado[i] == "-"))
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    if(!(48 <= Double.parseDouble(cortado[i]) && Double.parseDouble(cortado[i]) <= 57))
+                    {
+                        return false;
+                    }
+                }
+             }
+             return true;
+      }*/
+
     public static double pegarDouble()
     {
         boolean controller = true;
