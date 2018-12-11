@@ -1,5 +1,7 @@
 package br.ufrpe.bcc.ip2.projeto;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.lang.String;
 import java.lang.Object.*;
@@ -7,6 +9,8 @@ import java.lang.Object.*;
 public abstract class Verif
 {
     //essa classe tem a função de conferir problemas e resolver coisas em geral que podem dar errado
+
+
     public static boolean branco(String texto)
     {
         if(texto.isEmpty())
@@ -17,6 +21,17 @@ public abstract class Verif
         {
             return true;
         }
+    }
+
+    private static String[] cortarPalavras(String x)
+    {
+        String cortado[] = new String[x.length()];
+
+        for(int i = 0; i < x.length(); i++)
+        {
+            cortado[i] = x.substring(i,i+1);
+        }
+        return cortado;
     }
 
     public static boolean cpfcerto(String texto)
@@ -67,5 +82,47 @@ public abstract class Verif
             }
         }
         return num;
+    }
+
+    public static Date pegarData()
+    {
+        boolean controller = true;
+        Scanner scan = new Scanner(System.in);
+        String auxData;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date data = null;
+        while(true)
+        {
+            controller = true;
+            try
+            {
+                data = dateFormat.parse(scan.nextLine());
+            }
+            catch (ParseException x)
+            {
+                System.out.println("Erro de formatação!");
+                controller = false;
+            }
+            finally
+            {
+                if(controller)
+                {
+                    break;
+                }
+            }
+        }
+        return data;
+    }
+
+    public static boolean comparaDatas(Date dataInicial, Date dataFinal)
+    {
+        if(dataFinal.after(dataInicial))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

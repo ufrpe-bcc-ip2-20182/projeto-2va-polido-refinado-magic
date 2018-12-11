@@ -1,6 +1,7 @@
 package br.ufrpe.bcc.ip2.projeto;
 
 import java.text.ParseException;
+import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
