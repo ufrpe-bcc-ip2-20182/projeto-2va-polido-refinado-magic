@@ -37,4 +37,35 @@ public abstract class Verif
             return false;
         }
     }
+
+    public static double pegarDouble()
+    {
+        boolean controller = true;
+        Scanner scan = new Scanner(System.in);
+        double num = 0;
+        while(true)
+        {
+            controller = true;
+            try
+            {
+                num = scan.nextDouble();
+            }
+            catch (InputMismatchException e)
+            {
+                System.out.println("Você digitou algo errado!");
+                controller = false;
+                scan.next();
+                System.out.println("Tente de novo!");
+            }
+            finally
+            {
+                if(controller == true)
+                {
+                    System.out.println("Tudo certo!");
+                    break;
+                }
+            }
+        }
+        return num;
+    }
 }
