@@ -56,7 +56,7 @@ public abstract class Verif
 
     /*public static boolean verificarcpf(String texto)
     {
-        String cortado[] = new String[texto.length()];
+        String cortado[] = cortarPalavras(texto);
         for(int i = 0; i < texto.length(); i++)
         {
                 if(i == 3 || i == 7)
@@ -86,14 +86,7 @@ public abstract class Verif
 
     public  static boolean cpfcerto2(String texto)
     {
-        // AI ESSE CARALHO
-        String caracteres[] = new String[texto.length()];
-
-        for(int i=0;i<texto.length();i++)
-        {
-            caracteres[i] = texto.substring(i,i+1);
-        }
-
+        String caracteres[] = cortarPalavras(texto);
 
         for(int i=0;i<texto.length();i++)
         {
