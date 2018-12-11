@@ -88,15 +88,7 @@ public class Conta extends Pessoa
         this.setCpf(scanner.nextLine());
         System.out.print("Digite sua Data de Nascimento (formato 'dd/mm/aaaa'): ");
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date data = null;
-        try
-        {
-            data = dateFormat.parse(scanner.nextLine());
-        }
-        catch (ParseException x)
-        {
-            //Salvar erro em arquivo, sei lá
-        }
+        Date data = Verif.pegarData();
         this.setDatadenascimento(data);
     }
 
