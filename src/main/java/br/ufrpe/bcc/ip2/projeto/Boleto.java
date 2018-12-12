@@ -103,5 +103,41 @@ public class Boleto
         System.out.println("Novo Boleto registrado com sucesso.");
     }
 
+    /*
+    public Boleto()
+    {
+      boolean auxiliar = false;
+      Date dataInicial, dataFinal;
+
+      System.out.println("Digite o nome do Boleto:");
+      setNomeDoBoleto(scan.nextLine());
+
+      while(auxiliar == false)
+      {
+          System.out.println("Digite a data de criação do Boleto(formato 'dd/mm/aaaa'):");
+          dataInicial = pegarData();
+
+          System.out.println("Digite a data de vencimento do Boleto (formato 'dd/mm/aaaa'):");
+          dataFinal = pegarData();
+
+          auxiliar = comparaDatas(dataInicial, dataFinal);
+
+          if(auxiliar == false)
+          {
+             System.out.println("Algo deu errado, tente novamente.");
+          }
+      }
+
+      setDataDeCriacao(dataInicial);
+      setDataDeVencimento(dataFinal);
+
+      System.out.println("Digite o valor a ser pago:");
+      setValor(pegarDouble());
+
+      setPagamento(false);
+      System.out.println("Novo Boleto criado com sucesso.");
+
+    }
+     */
 
 }
