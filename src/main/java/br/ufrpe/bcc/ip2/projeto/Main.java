@@ -10,10 +10,10 @@ public class Main {
     public static void main(String[] args)
     {
         System.out.println("Executando...");
-        Conta conta = new Conta();
+        //Conta conta = new Conta();
         //conta.cadastro();
-        boolean x = Verif.cpfcerto("123.456.789-10");
-
+       // boolean x = Verif.cpfcerto("123.456.789-10");
+        Arquivos.criarDiretorio();
         //System.out.println(x);
         //para poder fazer o login, precisamos verificar algum tipo de array de contas
         //a mesma coisa para o cadastro, tem que ter algum tipo de array de contas
