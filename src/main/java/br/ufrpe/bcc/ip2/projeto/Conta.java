@@ -115,6 +115,7 @@ public class Conta extends Pessoa
     {
         //vai ter um monte de condição pra ver se isso vai dar certo. Se der tudo certo, retorna true. Lá onde isso for
         //chamado vammos ter uma verificação se deu tudo certo. Se não der, aborta tudo e relata o erro!
+        boletos.remove(bol);
         return true;
     }
 
