@@ -11,9 +11,14 @@ public class Arquivos
     public static void criarDiretorio()
     {
         File x = new File("Backups");
-        File file = new File("C:\\Users\\alcides.cunha\\IdeaProjects\\projeto-2va-polido-refinado-magic\\Backups\\testes.txt");
+        File caminho = new File(".");
+        try {
+            System.out.println(caminho.getCanonicalPath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        File file = new File(caminho + "\\Backups\\" + "testes.txt");
         boolean success = x.mkdir();
-        caminho = x.getAbsolutePath();
         if (!success)
         {
             // Falha no momento de criar o diretório

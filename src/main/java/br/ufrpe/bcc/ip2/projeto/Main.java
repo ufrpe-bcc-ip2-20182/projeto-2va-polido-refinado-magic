@@ -17,5 +17,6 @@ public class Main {
         //System.out.println(x);
         //para poder fazer o login, precisamos verificar algum tipo de array de contas
         //a mesma coisa para o cadastro, tem que ter algum tipo de array de contas
+        //criar um monte de pacotes para ver isso do controller, do negocio, da persistencia, etc
     }
 }
