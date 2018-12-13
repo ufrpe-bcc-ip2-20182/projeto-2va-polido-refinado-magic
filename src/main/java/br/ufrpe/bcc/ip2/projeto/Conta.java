@@ -64,7 +64,7 @@ public class Conta extends Pessoa
     public Conta()
     {
         this.setNome("Nome");
-        this.setCpf("000.000.000-78");
+        this.setCpf("000.000.000-00");
         SimpleDateFormat h = new SimpleDateFormat("dd/MM/yyyy");
         Date aux = null;
         try
@@ -85,7 +85,16 @@ public class Conta extends Pessoa
         Scanner scanner = new Scanner(System.in);
         this.setNome(scanner.nextLine());
         System.out.print("Digite seu cpf: ");
-        this.setCpf(scanner.nextLine());
+        boolean fluxo = true;
+        do
+        {
+            fluxo = this.setCpf(scanner.nextLine());
+            if(!fluxo)
+            {
+                System.out.println("Você digitou um cpf inválido!");
+            }
+        }
+        while (!fluxo);
         System.out.print("Digite sua Data de Nascimento (formato 'dd/mm/aaaa'): ");
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date data = Verif.pegarData();

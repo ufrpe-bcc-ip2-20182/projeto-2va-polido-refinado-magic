@@ -108,14 +108,18 @@ public abstract class Verif
                     aux++;
                 }
             }
-            if(aux==0) return false;
+            if(aux==0)
+            {
+                return false;
+            }
         }
 
         if( (caracteres[3].equals(".")) && (caracteres[7].equals(".")) && (caracteres[11].equals("-")) )
         {
             return true;
         }
-        else {
+        else
+        {
             return false;
         }
 

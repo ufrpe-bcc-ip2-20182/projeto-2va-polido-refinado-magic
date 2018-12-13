@@ -28,9 +28,17 @@ public class Pessoa
         return cpf;
     }
 
-    public void setCpf(String cpf)
+    public boolean setCpf(String cpf)
     {
-        this.cpf = cpf;
+        if(Verif.cpfcerto2(cpf))
+        {
+            this.cpf = cpf;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public Conta getConta()
