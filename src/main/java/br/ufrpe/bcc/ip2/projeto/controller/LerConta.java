@@ -5,13 +5,11 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Path;
 
 public abstract class LerConta
 {
-    public static void ler(Conta conta, Path caminho) throws IOException
+    public static void ler(Conta conta, File arquivoContas) throws IOException
     {
-        File arquivoContas = new File(caminho.toString());
         FileReader arquivo = new FileReader(arquivoContas);
         BufferedReader ler = new BufferedReader(arquivo);
 

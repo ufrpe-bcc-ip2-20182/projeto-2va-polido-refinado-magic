@@ -6,15 +6,13 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.file.Path;
 
 public abstract class SalvarConta
 {
-    public static void salvar(Conta conta, Path caminho) throws IOException
+    public static void salvar(Conta conta, File arquivoContas) throws IOException
     {
-        File arquivoContas = new File(caminho.toString());
-        FileWriter arq = new FileWriter(arquivoContas.getName());
-        PrintWriter salvar = new PrintWriter(arq);
+        FileWriter arquivo = new FileWriter(arquivoContas);
+        PrintWriter salvar = new PrintWriter(arquivo);
 
         salvar.println(conta.getLogin());
         salvar.print(conta.getSenha());
