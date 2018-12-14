@@ -15,8 +15,7 @@ public abstract class SalvarConta
         PrintWriter salvar = new PrintWriter(arquivo);
 
         salvar.println(conta.getLogin());
-        salvar.print(conta.getSenha());
-
+        salvar.println(conta.getSenha());
 
         salvar.close();
     }

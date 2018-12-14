@@ -1,6 +1,7 @@
 package br.ufrpe.bcc.ip2.projeto.controller;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Path;
 
 public class ArquivoContas
@@ -15,7 +16,14 @@ public class ArquivoContas
 
     public void setArquivoContas()
     {
-        File arquivo = new File("C:\\Users\\Josenita Vidal\\IdeaProjects\\projeto-2va-polido-refinado-magic\\src\\main\\java\\br\\ufrpe\\bcc\\ip2\\projeto\\arquivo\\Conta.txt");
+        File atual = new File(".");
+        String caminho = null;
+        try {
+            caminho = atual.getCanonicalPath();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        File arquivo = new File(caminho + "\\arquivo\\Conta.txt");
 
         this.arquivoContas = arquivo;
     }
