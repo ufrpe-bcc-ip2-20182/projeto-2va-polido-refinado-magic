@@ -1,5 +1,7 @@
 package br.ufrpe.bcc.ip2.projeto;
 
+import br.ufrpe.bcc.ip2.projeto.beans.Boleto;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
