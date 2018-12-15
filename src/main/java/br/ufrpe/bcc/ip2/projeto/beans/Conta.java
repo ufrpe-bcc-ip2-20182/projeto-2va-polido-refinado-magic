@@ -87,7 +87,7 @@ public class Conta extends Pessoa
         Date aux = null;
         try
         {
-            aux = h.parse("00/00/0000");
+            aux = h.parse("01/01/0000");
         }
         catch (ParseException x)
         {
@@ -96,62 +96,10 @@ public class Conta extends Pessoa
         this.setDatadenascimento(aux);
     }
 
-    @Override
-    public void cadastro()
-    {
-        System.out.print("Digite seu nome: ");
-        Scanner scanner = new Scanner(System.in);
-        this.setNome(scanner.nextLine());
-        System.out.print("Digite seu cpf: ");
-        boolean fluxo = true;
-        do
-        {
-            fluxo = this.setCpf(scanner.nextLine());
-            if(!fluxo)
-            {
-                System.out.println("Você digitou um cpf inválido!");
-            }
-        }
-        while (!fluxo);
-        System.out.print("Digite sua Data de Nascimento (formato 'dd/mm/aaaa'): ");
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date data = Verif.pegarData();
-        this.setDatadenascimento(data);
-    }
-
-    public boolean login()
-    {
-        return true;
-    }
 
     private Date dataDeCriacao;
     private double saldo;
     private boolean status;
     private ArrayList<Boleto> boletos;
 
-    public boolean pagarBoleto(Boleto bol)
-    {
-        //vai ter um monte de condição pra ver se isso vai dar certo. Se der tudo certo, retorna true. Lá onde isso for
-        //chamado vammos ter uma verificação se deu tudo certo. Se não der, aborta tudo e relata o erro!
-        boletos.remove(bol);
-        return true;
-    }
-
-    public boolean adicionarBoleto(Boleto bol)
-    {
-        boletos.add(bol);
-        //vai ter um monte de condição pra ver se isso vai dar certo. Se der tudo certo, retorna true. Lá onde isso for
-        //chamado vammos ter uma verificação se deu tudo certo. Se não der, aborta tudo e relata o erro!
-        return true;
-    }
-
-    public void mostrarPendencias()
-    {
-        for(Boleto aux: boletos)
-        {
-            int i = 1;
-            System.out.println("Pendencia: " + i + ": " + aux.getNomeDoBoleto());
-            System.out.println("Data de vencimento do boleto: " + aux.getDataDeVencimento());
-        }
-    }
 }
