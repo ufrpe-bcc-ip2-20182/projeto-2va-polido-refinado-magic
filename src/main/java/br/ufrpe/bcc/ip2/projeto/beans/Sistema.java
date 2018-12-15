@@ -5,10 +5,14 @@ import java.util.List;
 
 public abstract class Sistema
 {
-    private List<Conta> conta = new ArrayList<>();
+    private static List<Conta> conta = new ArrayList<>();
 
-    public List<Conta> getConta()
+    public static List<Conta> getConta()
     {
-      return this.conta;
+      return conta;
+    }
+
+    public static void setConta(List<Conta> contarec) {
+        conta = contarec;
     }
 }

@@ -14,20 +14,14 @@ public class Conta extends Pessoa
     private String senha;
     private String id;
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getId() {
         return id;
     }
 
-    public void gerarId()
-    {
-        String aux = this.getNome();
-        String nova = aux.substring(aux.length(),aux.length()-2); //pega 2 ultimos caracteres
-        Date x = this.getDatadenascimento();
-        String aux2 = x.toString();
-        aux2 = aux2.substring(3,5); //pega o mes
-        aux = nova + aux2; //junta tudo e gera o id
-        this.id = aux;
-    }
 
     public String getLogin()
     {
