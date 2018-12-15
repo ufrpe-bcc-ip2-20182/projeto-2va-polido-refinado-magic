@@ -1,6 +1,6 @@
 package br.ufrpe.bcc.ip2.projeto.controller;
 
-import br.ufrpe.bcc.ip2.projeto.Conta;
+import br.ufrpe.bcc.ip2.projeto.beans.Conta;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;

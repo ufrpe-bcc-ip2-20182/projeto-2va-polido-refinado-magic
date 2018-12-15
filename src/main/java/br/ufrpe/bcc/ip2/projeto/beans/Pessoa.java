@@ -1,10 +1,8 @@
-package br.ufrpe.bcc.ip2.projeto;
+package br.ufrpe.bcc.ip2.projeto.beans;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import br.ufrpe.bcc.ip2.projeto.util.Verif;
+
 import java.util.Date;
-import java.util.Scanner;
-import java.util.SimpleTimeZone;
 
 public class Pessoa
 {

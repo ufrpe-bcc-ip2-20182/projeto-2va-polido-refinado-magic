@@ -1,4 +1,4 @@
-package br.ufrpe.bcc.ip2.projeto;
+package br.ufrpe.bcc.ip2.projeto.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
