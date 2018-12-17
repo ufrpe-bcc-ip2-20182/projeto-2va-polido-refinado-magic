@@ -13,6 +13,10 @@ public class Conta extends Pessoa
     private String login;
     private String senha;
     private String id;
+    private Date dataDeCriacao;
+    private double saldo;
+    private boolean status;
+    private ArrayList<Boleto> boletos;
 
     public void setId(String id) {
         this.id = id;
@@ -73,6 +77,21 @@ public class Conta extends Pessoa
         this.status = status;
     }
 
+    public ArrayList<Boleto> getBoletos()
+    {
+        return this.boletos;
+    }
+
+    public void setBoletos(Boleto boleto)
+    {
+        this.boletos.add(boleto);
+    }
+
+    public void setBoletos()
+    {
+        this.boletos.clear();
+    }
+
     public Conta()
     {
         this.setNome("Nome");
@@ -89,11 +108,5 @@ public class Conta extends Pessoa
         }
         this.setDatadenascimento(aux);
     }
-
-
-    private Date dataDeCriacao;
-    private double saldo;
-    private boolean status;
-    private ArrayList<Boleto> boletos;
 
 }

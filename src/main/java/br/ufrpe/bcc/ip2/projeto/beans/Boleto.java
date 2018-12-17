@@ -61,9 +61,4 @@ public class Boleto
         this.valor = valor;
     }
 
-    public Boleto()
-    {
-
-    }
-
 }
