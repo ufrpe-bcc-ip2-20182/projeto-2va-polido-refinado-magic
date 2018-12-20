@@ -8,6 +8,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public abstract class LerArquivo
 {
@@ -29,6 +33,28 @@ public abstract class LerArquivo
             {
                 novaConta.setLogin(ler.readLine());
                 novaConta.setSenha(ler.readLine());
+                novaConta.setNome(ler.readLine());
+                novaConta.setCpf(ler.readLine());
+
+                Date data = new Date();
+                SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+                try {
+                    data = f.parse(ler.readLine());
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                novaConta.setDatadenascimento(data);
+
+                try {
+                    data = f.parse(ler.readLine());
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                novaConta.setDataDeCriacao(data);
+                novaConta.setStatus(Boolean.getBoolean(ler.readLine()));
+                novaConta.setSaldo(Double.parseDouble(ler.readLine()));
             }
             else if(input=="<NOVO-BOLETO>")
             {
