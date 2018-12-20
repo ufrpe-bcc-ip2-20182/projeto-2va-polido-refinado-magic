@@ -41,8 +41,8 @@ public abstract class LerArquivo
             }
             else if(input=="<FIM-CONTA>")
             {
-                sistema.setContas(novaConta);
-                novaConta.setBoletos();
+                sistema.addContas(novaConta);
+                novaConta.setBoletos(); //o set de conta para boletos faz que todos os boletos inseridos sejam deletados
             }
             else
             {

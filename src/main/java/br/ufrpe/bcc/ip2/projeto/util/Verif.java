@@ -10,7 +10,6 @@ public abstract class Verif
 {
     //essa classe tem a função de conferir problemas e resolver coisas em geral que podem dar errado
 
-
     public static boolean branco(String texto)
     {
         if(texto.isEmpty())

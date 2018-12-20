@@ -12,7 +12,20 @@ public class Sistema
       return contas;
     }
 
-    public void setContas(Conta conta) {
+    public void addContas(Conta conta) {
         this.contas.add(conta);
+    }
+
+    public void removeContas(Conta conta)
+    {
+        this.contas.remove(conta);
+        if(this.contas.contains(conta))
+        {
+            this.contas.remove(conta);
+        }
+        else
+        {
+            System.out.println("Irremovivel.");
+        }
     }
 }

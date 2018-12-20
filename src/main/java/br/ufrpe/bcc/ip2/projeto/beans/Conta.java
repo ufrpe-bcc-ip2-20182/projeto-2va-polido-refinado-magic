@@ -26,7 +26,6 @@ public class Conta extends Pessoa
         return id;
     }
 
-
     public String getLogin()
     {
         return login;

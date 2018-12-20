@@ -2,18 +2,22 @@ package br.ufrpe.bcc.ip2.projeto.controller;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
 
 public class ArquivoContas
 {
     File arquivoContas;
 
 
-    public Path getArquivoContas()
+    public File getArquivoContas()
     {
-        return arquivoContas.toPath();
+        setArquivoContas();
+        return arquivoContas;
     }
 
+    public String getCaminho()
+    {
+        return arquivoContas.getPath();
+    }
     public void setArquivoContas()
     {
         File atual = new File(".");
@@ -23,7 +27,7 @@ public class ArquivoContas
         } catch (IOException e) {
             e.printStackTrace();
         }
-        File arquivo = new File(caminho + "\\arquivo\\Conta.txt");
+        File arquivo = new File(caminho + "\\src\\main\\java\\br\\ufrpe\\bcc\\ip2\\projeto\\arquivo\\Conta.txt");
 
         this.arquivoContas = arquivo;
     }

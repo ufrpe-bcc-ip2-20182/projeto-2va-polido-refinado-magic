@@ -1,5 +1,7 @@
 package br.ufrpe.bcc.ip2.projeto.beans;
 
+import br.ufrpe.bcc.ip2.projeto.arquivo.SalvarArquivo;
+import br.ufrpe.bcc.ip2.projeto.controller.ArquivoContas;
 import br.ufrpe.bcc.ip2.projeto.util.Verif;
 
 import java.text.SimpleDateFormat;
@@ -12,9 +14,11 @@ public class Adicionar
 
     public void adicionarConta(Conta x)
     {
-        List<Conta> contas = Sistema.getConta();
-        contas.add(cadastrar());
-        Sistema.setConta(contas);
+        Sistema s = new Sistema();
+        s.addContas(x);
+        ArquivoContas caminho = new ArquivoContas();
+        System.out.println(caminho.getArquivoContas());
+        SalvarArquivo.salvar(caminho.getArquivoContas(),x);
     }
 
     public Conta cadastrar()
@@ -24,7 +28,8 @@ public class Adicionar
         Scanner scanner = new Scanner(System.in);
         nova.setNome(scanner.nextLine());
         System.out.print("Digite seu cpf: ");
-        boolean fluxo = true;
+        nova.setCpf(scanner.nextLine());
+        /*boolean fluxo = true;
         do
         {
             fluxo = nova.setCpf(scanner.nextLine());
@@ -33,7 +38,7 @@ public class Adicionar
                 System.out.println("Você digitou um cpf inválido!");
             }
         }
-        while (!fluxo);
+        while (!fluxo);*/
         System.out.print("Digite sua Data de Nascimento (formato 'dd/mm/aaaa'): ");
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date data = Verif.pegarData();
