@@ -36,8 +36,6 @@ public class Arquivos
     }
     public void Salvar(Conta c)
     {
-        //contas 0
-        //pessoas 0
-        //boletos 0
+
     }
 }

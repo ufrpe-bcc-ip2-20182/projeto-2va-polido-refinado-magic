@@ -7,7 +7,7 @@ public class Sistema
 {
     private static List<Conta> contas = new ArrayList<>();
 
-    public static List<Conta> getConta()
+    public static List<Conta> getContas()
     {
       return contas;
     }

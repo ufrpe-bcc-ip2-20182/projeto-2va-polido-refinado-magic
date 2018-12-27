@@ -6,24 +6,24 @@ import br.ufrpe.bcc.ip2.projeto.beans.Conta;
 import java.io.*;
 import java.util.ArrayList;
 
-public class SalvarArquivo
+public class SalvarArquivo //Essa classe tem a função de criar o arquivo dentro dos diretórios
 {
     public static void salvar(File arquivo, Conta conta)
     {
         FileWriter escritor;
         try
         {
-            escritor = new FileWriter(arquivo);
+            escritor = new FileWriter(arquivo, true); //escritor recebe o arquivo passado no argumento da função
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); //printa o erro
         }
         PrintWriter escrever = null;
 
         try
         {
-            escrever = new PrintWriter(arquivo);
+            escrever = new PrintWriter(arquivo); //escrever recebe a mesma coisa que escritor
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            e.printStackTrace(); //printa o erro
         }
         escrever.println("<NOVA-CONTA>");
         escrever.println(conta.getLogin());

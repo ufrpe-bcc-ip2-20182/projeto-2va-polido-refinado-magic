@@ -6,7 +6,6 @@ import br.ufrpe.bcc.ip2.projeto.util.Verif;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 public class Adicionar
@@ -17,8 +16,15 @@ public class Adicionar
         Sistema s = new Sistema();
         s.addContas(x);
         ArquivoContas caminho = new ArquivoContas();
-        System.out.println(caminho.getArquivoContas());
-        SalvarArquivo.salvar(caminho.getArquivoContas(),x);
+        //System.out.println(caminho.getCaminho());
+        try
+        {
+            SalvarArquivo.salvar(caminho.getArquivoContas(),x);
+        }
+        catch (Exception e)
+        {
+            System.out.println("Deu erro, mas continue seguindo. Erro: " + e);
+        }
     }
 
     public Conta cadastrar()
