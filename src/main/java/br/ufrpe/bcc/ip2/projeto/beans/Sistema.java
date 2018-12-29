@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Sistema
 {
-    private static List<Conta> contas = new ArrayList<>();
+    private static ArrayList<Conta> contas = new ArrayList<>();
 
-    public static List<Conta> getContas()
+    public static ArrayList<Conta> getContas()
     {
       return contas;
     }

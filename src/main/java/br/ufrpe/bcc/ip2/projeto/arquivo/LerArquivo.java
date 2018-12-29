@@ -4,78 +4,108 @@ import br.ufrpe.bcc.ip2.projeto.beans.Boleto;
 import br.ufrpe.bcc.ip2.projeto.beans.Conta;
 import br.ufrpe.bcc.ip2.projeto.beans.Sistema;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.text.DateFormat;
+import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public abstract class LerArquivo
 {
-    public static Sistema ler(File arquivo) throws IOException
+    public static Sistema ler(File arquivo)
     {
-        FileReader arquivoleitura = new FileReader(arquivo);
+        FileReader arquivoleitura = null;
+
+        try {
+          arquivoleitura = new FileReader(arquivo);
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+            return null;
+        }
+
         BufferedReader ler = new BufferedReader(arquivoleitura);
 
         Sistema sistema = new Sistema();
         Conta novaConta = new Conta();
         Boleto novoBoleto = new Boleto();
-
+        Date data = new Date();
+        SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
         String input;
 
         while(true)
         {
-            input = ler.readLine();
-            if(input=="<NOVA-CONTA>")
+            try
             {
-                novaConta.setLogin(ler.readLine());
-                novaConta.setSenha(ler.readLine());
-                novaConta.setNome(ler.readLine());
-                novaConta.setCpf(ler.readLine());
 
-                Date data = new Date();
-                SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
-                try {
-                    data = f.parse(ler.readLine());
-                } catch (ParseException e) {
-                    e.printStackTrace();
+                input = ler.readLine();
+                if (input == "<NOVA-CONTA>") {
+                    novaConta.setLogin(ler.readLine());
+                    novaConta.setSenha(ler.readLine());
+                    novaConta.setNome(ler.readLine());
+                    novaConta.setCpf(ler.readLine());
+
+                    try {
+                        data = f.parse(ler.readLine());
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    novaConta.setDatadenascimento(data);
+
+                    try {
+                        data = f.parse(ler.readLine());
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    novaConta.setDataDeCriacao(data);
+                    novaConta.setStatus(Boolean.getBoolean(ler.readLine()));
+                    novaConta.setSaldo(Double.parseDouble(ler.readLine()));
+                } else if (input == "<NOVO-BOLETO>") {
+                    novoBoleto.setNomeDoBoleto(ler.readLine());
+                    novoBoleto.setValor(Double.parseDouble(ler.readLine()));
+
+                    try {
+                        data = f.parse(ler.readLine());
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    novoBoleto.setDataDeCriacao(data);
+
+                    try {
+                        data = f.parse(ler.readLine());
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    novoBoleto.setDataDeVencimento(data);
+                    novoBoleto.setValor(Double.parseDouble(ler.readLine()));
+                    novoBoleto.setPagamento(Boolean.parseBoolean(ler.readLine()));
+                } else if (input == "<FIM-BOLETO>") {
+                    novaConta.setBoletos(novoBoleto);
+                } else if (input == "<FIM-CONTA>") {
+                    sistema.addContas(novaConta);
+                    novaConta.setBoletos(); //o set de conta para boletos faz que todos os boletos inseridos sejam deletados
+                } else {
+                    break;
                 }
 
-                novaConta.setDatadenascimento(data);
-
-                try {
-                    data = f.parse(ler.readLine());
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-
-                novaConta.setDataDeCriacao(data);
-                novaConta.setStatus(Boolean.getBoolean(ler.readLine()));
-                novaConta.setSaldo(Double.parseDouble(ler.readLine()));
             }
-            else if(input=="<NOVO-BOLETO>")
+            catch(IOException e)
             {
-                novoBoleto.setNomeDoBoleto(ler.readLine());
-                novoBoleto.setValor(Double.parseDouble(ler.readLine()));
-            }
-            else if(input=="<FIM-BOLETO>")
-            {
-                novaConta.setBoletos(novoBoleto);
-            }
-            else if(input=="<FIM-CONTA>")
-            {
-                sistema.addContas(novaConta);
-                novaConta.setBoletos(); //o set de conta para boletos faz que todos os boletos inseridos sejam deletados
-            }
-            else
-            {
-                break;
+                e.printStackTrace();
             }
         }
-        arquivoleitura.close();
+
+        try {
+            arquivoleitura.close();
+        }catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
         return sistema;
     }
 

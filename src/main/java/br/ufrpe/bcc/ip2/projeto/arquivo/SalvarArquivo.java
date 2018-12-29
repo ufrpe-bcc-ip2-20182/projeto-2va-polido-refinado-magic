@@ -2,46 +2,92 @@ package br.ufrpe.bcc.ip2.projeto.arquivo;
 
 import br.ufrpe.bcc.ip2.projeto.beans.Boleto;
 import br.ufrpe.bcc.ip2.projeto.beans.Conta;
-
-import java.io.*;
+import br.ufrpe.bcc.ip2.projeto.beans.Sistema;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
-public class SalvarArquivo //Essa classe tem a função de criar o arquivo dentro dos diretórios
+public class SalvarArquivo
 {
-    public static void salvar(File arquivo, Conta conta)
+    public void salvar(Sistema sistema, File arquivo)
     {
-        FileWriter escritor;
+        FileWriter escritor = null;
+        ArrayList<Conta> contas;
+        ArrayList<Boleto> boletos;
+
         try
         {
-            escritor = new FileWriter(arquivo, true); //escritor recebe o arquivo passado no argumento da função
-        } catch (IOException e) {
-            e.printStackTrace(); //printa o erro
+            escritor = new FileWriter(arquivo);
         }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
         PrintWriter escrever = null;
 
         try
         {
-            escrever = new PrintWriter(arquivo); //escrever recebe a mesma coisa que escritor
-        } catch (FileNotFoundException e) {
-            e.printStackTrace(); //printa o erro
+            escrever = new PrintWriter(arquivo);
         }
-        escrever.println("<NOVA-CONTA>");
-        escrever.println(conta.getLogin());
-        escrever.println(conta.getSenha());
-        escrever.println(conta.getNome());
-        escrever.println(conta.getCpf());
-        escrever.println(conta.getDatadenascimento());
-        escrever.println(conta.getDataDeCriacao());
-        escrever.println(conta.isStatus());
-        escrever.println(conta.getSaldo());
-
-        ArrayList<Boleto> aux = conta.getBoletos();
-        for (int i = 0; i < aux.size(); i++)
+        catch (FileNotFoundException e)
         {
-            escrever.println("<NOVO-BOLETO>");
-            escrever.println(aux.get(i));
-            escrever.println("<FIM-BOLETO>");
+            e.printStackTrace();
         }
-        escrever.println("<FIM-CONTA>");
+
+        if(sistema.getContas()!= null)
+        {
+
+            contas = sistema.getContas();
+            for(int i=0; i<contas.size(); i++)
+            {
+                escrever.println("<NOVA-CONTA>");
+                Conta contaAux = new Conta();
+                contaAux = contas.get(i);
+                escrever.println(contaAux.getLogin());
+                escrever.println(contaAux.getSenha());
+                escrever.println(contaAux.getNome());
+                escrever.println(contaAux.getCpf());
+                escrever.println(contaAux.getDatadenascimento());
+                escrever.println(contaAux.getDataDeCriacao());
+                escrever.println(contaAux.isStatus());
+                escrever.println(contaAux.getSaldo());
+
+                boletos = contaAux.getBoletos();
+
+                if(boletos!=null)
+                {
+                    for (int j=0;j<boletos.size();j++)
+                    {
+                        escrever.println("NOVO-BOLETO>");
+                        Boleto boletoAux = new Boleto();
+                        boletoAux = boletos.get(j);
+                        escrever.println(boletoAux.getNomeDoBoleto());
+                        escrever.println(boletoAux.getValor());
+                        escrever.println(boletoAux.getDataDeCriacao());
+                        escrever.println(boletoAux.getDataDeVencimento());
+                        escrever.println(boletoAux.getValor());
+                        escrever.println(boletoAux.isPagamento());
+                        escrever.println("<FIM-BOLETO>");
+                    }
+                }
+                escrever.println("<FIM-CONTA");
+            }
+        }
+        escrever.println("<FIM-ARQUIVO>");
+
+        try
+        {
+            escritor.close();
+        }
+        catch (IOException x)
+        {
+            x.printStackTrace();
+        }
+
     }
 }
+
