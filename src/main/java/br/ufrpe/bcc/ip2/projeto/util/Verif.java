@@ -1,5 +1,8 @@
 package br.ufrpe.bcc.ip2.projeto.util;
 
+import br.ufrpe.bcc.ip2.projeto.beans.Boleto;
+import br.ufrpe.bcc.ip2.projeto.beans.Conta;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -124,6 +127,19 @@ public abstract class Verif
 
     }
 
+    public static Boleto existeBoleto(String nome, Conta con)
+    {
+        ArrayList<Boleto> boletos = con.getBoletos();
+        for(int i = 0; i < boletos.size(); i++)
+        {
+            if(nome == boletos.get(i).getNomeDoBoleto())
+            {
+                return boletos.get(i);
+            }
+        }
+        return null;
+    }
+
     public static double pegarDouble()
     {
         boolean controller = true;
@@ -153,36 +169,6 @@ public abstract class Verif
             }
         }
         return num;
-    }
-
-    public static Date pegarData()
-    {
-        boolean controller = true;
-        Scanner scan = new Scanner(System.in);
-        String auxData;
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date data = null;
-        while(true)
-        {
-            controller = true;
-            try
-            {
-                data = dateFormat.parse(scan.nextLine());
-            }
-            catch (ParseException x)
-            {
-                System.out.println("Erro de formatação!");
-                controller = false;
-            }
-            finally
-            {
-                if(controller)
-                {
-                    break;
-                }
-            }
-        }
-        return data;
     }
 
     public static boolean comparaDatas(Date dataInicial, Date dataFinal)

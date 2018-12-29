@@ -91,6 +91,11 @@ public class Conta extends Pessoa
         this.boletos.clear();
     }
 
+    public void removeBoleto(Boleto boleto)
+    {
+        this.boletos.remove(boleto);
+    }
+
     public Conta()
     {
         this.setNome("Nome");

@@ -1,9 +1,9 @@
 package br.ufrpe.bcc.ip2.projeto.beans;
 
-import br.ufrpe.bcc.ip2.projeto.arquivo.SalvarArquivo;
-import br.ufrpe.bcc.ip2.projeto.controller.ArquivoContas;
+import br.ufrpe.bcc.ip2.projeto.util.Getters;
 import br.ufrpe.bcc.ip2.projeto.util.Verif;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -11,22 +11,49 @@ import java.util.Scanner;
 public class Adicionar
 {
 
-    public void adicionarConta(Conta x)
+    public void adicionarConta(Sistema sis)
     {
-        Sistema s = new Sistema();
-        s.addContas(x);
-        ArquivoContas caminho = new ArquivoContas();
-        //System.out.println(caminho.getCaminho());
-        try
-        {
-            SalvarArquivo.salvar(caminho.getArquivoContas(),x);
-        }
-        catch (Exception e)
-        {
-            System.out.println("Deu erro, mas continue seguindo. Erro: " + e);
-        }
+        sis.addContas(cadastrar());
     }
 
+    public void adicionarBoleto(Conta con)
+    {
+        con.setBoletos();
+    }
+
+    public Boleto inserirBoleto()
+    {
+        Boleto bol = new Boleto();
+        System.out.print("Digite o nome do boleto: ");
+        Scanner scanner = new Scanner(System.in);
+        bol.setNomeDoBoleto(scanner.nextLine());
+        System.out.print("Digite o valor do boleto: ");
+        bol.setValor(scanner.nextDouble());
+        System.out.print("Digite a Data de Criação (formato 'dd/mm/aaaa'): ");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date data = null;
+        try
+        {
+            data = dateFormat.parse(Getters.getDiadeHoje());
+        }
+        catch (ParseException e) {
+            e.printStackTrace();
+        }
+        bol.setDataDeCriacao(data);
+        System.out.print("Digite a Data de Vencimento (formato 'dd/mm/aaaa'): ");
+        data = Getters.pegarData();
+        bol.setDataDeVencimento(data);
+        return bol;
+    }
+
+    public void removerBoleto(String nomedoboleto, Conta conta)
+    {
+        Boleto aux = Verif.existeBoleto(nomedoboleto, conta);
+        if (aux != null)
+        {
+            conta.removeBoleto(aux);
+        }
+    }
     public Conta cadastrar()
     {
         Conta nova = new Conta();
@@ -47,7 +74,7 @@ public class Adicionar
         while (!fluxo);*/
         System.out.print("Digite sua Data de Nascimento (formato 'dd/mm/aaaa'): ");
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date data = Verif.pegarData();
+        Date data = Getters.pegarData();
         nova.setDatadenascimento(data);
         return nova;
     }

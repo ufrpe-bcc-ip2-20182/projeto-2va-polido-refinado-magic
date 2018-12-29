@@ -9,7 +9,10 @@ public class Boleto
     private boolean pagamento;
     private double valor;
 
-
+    public Boleto()
+    {
+        this.pagamento = false;
+    }
 
     public String getNomeDoBoleto()
     {
