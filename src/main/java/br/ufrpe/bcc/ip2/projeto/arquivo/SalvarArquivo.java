@@ -29,14 +29,9 @@ public class SalvarArquivo
 
         PrintWriter escrever = null;
 
-        try
-        {
-            escrever = new PrintWriter(arquivo);
-        }
-        catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }
+
+        escrever = new PrintWriter(escritor);
+
 
         if(sistema.getContas()!= null)
         {
@@ -74,7 +69,7 @@ public class SalvarArquivo
                         escrever.println("<FIM-BOLETO>");
                     }
                 }
-                escrever.println("<FIM-CONTA");
+                escrever.println("<FIM-CONTA>");
             }
         }
         escrever.println("<FIM-ARQUIVO>");

@@ -1,1 +1,11 @@
+<NOVA-CONTA>
+null
+null
+teste
+null
+Sun Nov 30 00:00:00 BRT 2
+null
+false
+0.0
+<FIM-CONTA>
 <FIM-ARQUIVO>
