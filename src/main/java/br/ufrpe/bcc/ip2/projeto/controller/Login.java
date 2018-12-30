@@ -19,7 +19,10 @@ public class Login
         contaatual = Verif.existeConta(login,sistema);
         if(contaatual != null)
         {
-            System.out.println("Bem vindo " + contaatual.getNome() + "!");
+            if(senha.equals(contaatual.getSenha()))
+            {
+                System.out.println("Bem vindo " + contaatual.getNome() + "!");
+            }
         }
     }
 }
