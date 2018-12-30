@@ -76,7 +76,10 @@ public class SalvarArquivo
 
         try
         {
+            escritor.flush();
             escritor.close();
+            escrever.flush();
+            escrever.close();
         }
         catch (IOException x)
         {

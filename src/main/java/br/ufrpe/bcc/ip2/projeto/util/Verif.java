@@ -2,6 +2,7 @@ package br.ufrpe.bcc.ip2.projeto.util;
 
 import br.ufrpe.bcc.ip2.projeto.beans.Boleto;
 import br.ufrpe.bcc.ip2.projeto.beans.Conta;
+import br.ufrpe.bcc.ip2.projeto.beans.Sistema;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -127,12 +128,25 @@ public abstract class Verif
 
     }
 
+    public static Conta existeConta(String nome, Sistema sis)
+    {
+        ArrayList<Conta> contas = sis.getContas();
+        for (int i = 0; i < contas.size(); i++)
+        {
+            if(nome.equals(contas.get(i).getLogin()))
+            {
+                return contas.get(i);
+            }
+        }
+        return null;
+    }
+
     public static Boleto existeBoleto(String nome, Conta con)
     {
         ArrayList<Boleto> boletos = con.getBoletos();
         for(int i = 0; i < boletos.size(); i++)
         {
-            if(nome == boletos.get(i).getNomeDoBoleto())
+            if(nome.equals(boletos.get(i).getNomeDoBoleto()))
             {
                 return boletos.get(i);
             }

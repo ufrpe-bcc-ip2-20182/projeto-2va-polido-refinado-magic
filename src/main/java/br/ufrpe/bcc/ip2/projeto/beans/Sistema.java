@@ -12,7 +12,8 @@ public class Sistema
       return contas;
     }
 
-    public void addContas(Conta conta) {
+    public void addContas(Conta conta)
+    {
         this.contas.add(conta);
     }
 

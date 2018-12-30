@@ -12,7 +12,7 @@ public class Getters
     {
         Calendar c = Calendar.getInstance();
         String dataDeHoje = String.valueOf(c.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(c.get(Calendar.MONTH)+1) + "/" + String.valueOf(c.get(Calendar.YEAR));
-        System.out.println(dataDeHoje);
+        //System.out.println(dataDeHoje);
         return dataDeHoje;
     }
 
