@@ -1,19 +1,10 @@
-package br.ufrpe.bcc.ip2.projeto;
+import arquivo.Arquivo;
+import arquivo.SalvarArquivo;
+import beans.Adicionar;
+import beans.Sistema;
+import controller.Login;
 
-import br.ufrpe.bcc.ip2.projeto.arquivo.Arquivo;
-import br.ufrpe.bcc.ip2.projeto.arquivo.SalvarArquivo;
-import br.ufrpe.bcc.ip2.projeto.beans.Adicionar;
-import br.ufrpe.bcc.ip2.projeto.beans.Conta;
-import br.ufrpe.bcc.ip2.projeto.beans.Sistema;
-import br.ufrpe.bcc.ip2.projeto.controller.Login;
-import br.ufrpe.bcc.ip2.projeto.util.Getters;
-
-import java.io.File;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class Main {
 

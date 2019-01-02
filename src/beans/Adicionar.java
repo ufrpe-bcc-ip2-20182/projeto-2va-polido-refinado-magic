@@ -1,10 +1,9 @@
-package br.ufrpe.bcc.ip2.projeto.beans;
+package beans;
 
-import br.ufrpe.bcc.ip2.projeto.arquivo.SalvarArquivo;
-import br.ufrpe.bcc.ip2.projeto.util.Getters;
-import br.ufrpe.bcc.ip2.projeto.util.Verif;
+import util.Getters;
+import util.Verif;
+import arquivo.SalvarArquivo;
 
-import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;

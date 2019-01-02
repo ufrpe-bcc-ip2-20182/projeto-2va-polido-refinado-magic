@@ -1,4 +1,4 @@
-package br.ufrpe.bcc.ip2.projeto.controller;
+package controller;
 
 import java.io.File;
 import java.io.IOException;

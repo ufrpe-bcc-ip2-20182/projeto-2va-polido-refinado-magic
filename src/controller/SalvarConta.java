@@ -1,7 +1,7 @@
-package br.ufrpe.bcc.ip2.projeto.controller;
+package controller;
 
+import beans.Conta;
 
-import br.ufrpe.bcc.ip2.projeto.beans.Conta;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

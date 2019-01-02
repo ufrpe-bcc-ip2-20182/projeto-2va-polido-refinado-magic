@@ -1,9 +1,8 @@
-package br.ufrpe.bcc.ip2.projeto.beans;
+package beans;
 
-import br.ufrpe.bcc.ip2.projeto.util.Verif;
+
 
 import java.util.Date;
-import java.util.Scanner;
 
 public class Pessoa
 {

@@ -1,9 +1,9 @@
-package br.ufrpe.bcc.ip2.projeto.controller;
+package controller;
 
-import br.ufrpe.bcc.ip2.projeto.beans.*;
-import br.ufrpe.bcc.ip2.projeto.util.Verif;
+import util.Verif;
+import beans.Conta;
+import beans.Sistema;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Login

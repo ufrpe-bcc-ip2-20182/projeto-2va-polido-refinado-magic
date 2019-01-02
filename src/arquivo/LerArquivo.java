@@ -1,8 +1,8 @@
-package br.ufrpe.bcc.ip2.projeto.arquivo;
+package arquivo;
 
-import br.ufrpe.bcc.ip2.projeto.beans.Boleto;
-import br.ufrpe.bcc.ip2.projeto.beans.Conta;
-import br.ufrpe.bcc.ip2.projeto.beans.Sistema;
+import beans.Boleto;
+import beans.Conta;
+import beans.Sistema;
 
 import java.io.*;
 import java.text.ParseException;
