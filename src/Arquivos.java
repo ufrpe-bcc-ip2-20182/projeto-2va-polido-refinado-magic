@@ -1,6 +1,6 @@
-package br.ufrpe.bcc.ip2.projeto;
 
-import br.ufrpe.bcc.ip2.projeto.beans.Conta;
+
+import beans.Conta;
 
 import java.io.File;
 import java.io.*;

@@ -1,14 +1,12 @@
-package br.ufrpe.bcc.ip2.projeto.util;
+package util;
 
-import br.ufrpe.bcc.ip2.projeto.beans.Boleto;
-import br.ufrpe.bcc.ip2.projeto.beans.Conta;
-import br.ufrpe.bcc.ip2.projeto.beans.Sistema;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import beans.Boleto;
+import beans.Conta;
+import beans.Sistema;
+
 import java.util.*;
 import java.lang.String;
-import java.lang.Object.*;
 
 public abstract class Verif
 {
@@ -92,7 +90,7 @@ public abstract class Verif
              return true;
       }*/
 
-    public  static boolean cpfcerto2(String texto)
+    public static boolean cpfcerto2(String texto)
     {
         if(texto.length()!=14)
         {

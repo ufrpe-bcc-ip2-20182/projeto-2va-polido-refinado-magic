@@ -1,4 +1,4 @@
-package br.ufrpe.bcc.ip2.projeto.beans;
+package beans;
 import java.util.Date;
 
 public class Boleto

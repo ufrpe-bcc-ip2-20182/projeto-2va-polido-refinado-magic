@@ -1,7 +1,6 @@
-package br.ufrpe.bcc.ip2.projeto.beans;
+package beans;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Sistema
 {
