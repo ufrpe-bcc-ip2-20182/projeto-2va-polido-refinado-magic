@@ -15,7 +15,7 @@ public class Adicionar
     public void adicionarConta(Sistema sis)
     {
         sis.addContas(cadastrar());
-        SalvarArquivo salvarArquivo = new SalvarArquivo();
+        //SalvarArquivo salvarArquivo = new SalvarArquivo();
         //salvarArquivo.salvar(sis, new File("arquivo.txt")); por hora, não vamos usar
     }
 

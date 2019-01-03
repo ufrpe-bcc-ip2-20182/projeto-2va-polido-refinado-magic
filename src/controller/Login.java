@@ -24,5 +24,9 @@ public class Login
                 System.out.println("Bem vindo " + contaatual.getNome() + "!");
             }
         }
+        else
+        {
+            System.out.println("Conta não localizada!");
+        }
     }
 }
