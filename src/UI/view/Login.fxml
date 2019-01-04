@@ -10,9 +10,11 @@
    <children>
       <Button layoutX="89.0" layoutY="252.0" mnemonicParsing="false" onAction="#btLogin" text="Login" />
       <Button layoutX="432.0" layoutY="252.0" mnemonicParsing="false" onAction="#btCadastro" text="Cadastrar" />
-      <PasswordField layoutX="89.0" layoutY="200.0" prefHeight="27.0" prefWidth="422.0" promptText="Senha" />
+      <PasswordField layoutX="153.0" layoutY="200.0" prefHeight="27.0" prefWidth="318.0" />
       <Button layoutX="232.0" layoutY="252.0" mnemonicParsing="false" text="Esqueceu a senha?" />
       <Text layoutX="258.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROGASTOS" textAlignment="CENTER" />
-      <TextField layoutX="89.0" layoutY="150.0" prefHeight="27.0" prefWidth="422.0" promptText="Usuário" />
+      <TextField layoutX="153.0" layoutY="150.0" prefHeight="27.0" prefWidth="318.0" />
+      <Text layoutX="92.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário:" textAlignment="CENTER" />
+      <Text layoutX="93.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" textAlignment="CENTER" />
    </children>
 </Pane>
