@@ -1,9 +1,15 @@
 package UI.controller;
 import UI.MainJavaFX;
+import beans.Sistema;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
+
 public class MainController {
+
+
+    public MainController() {
+    }
 
     @FXML
     protected void btCadastro(ActionEvent e){
@@ -16,3 +22,5 @@ public class MainController {
     }
 
 }
+
+

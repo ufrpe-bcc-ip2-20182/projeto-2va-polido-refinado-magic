@@ -12,6 +12,8 @@ public class MainJavaFX extends Application {
     private static Scene sceneLogin;
     private static Scene sceneCadastro;
     private static Scene sceneLogado;
+    private static Scene sceneAdd;
+    private static Scene sceneMudarSenha;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -41,6 +43,12 @@ public class MainJavaFX extends Application {
                 break;
             case "logado":
                 stage.setScene(sceneLogado);
+                break;
+            case "add":
+                stage.setScene(sceneAdd);
+                break;
+            case "mudarSenha":
+                stage.setScene(sceneMudarSenha);
         }
     }
 
