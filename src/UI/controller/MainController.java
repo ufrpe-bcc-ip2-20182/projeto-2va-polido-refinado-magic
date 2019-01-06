@@ -86,13 +86,10 @@ public class MainController {
         this.sis = sis;
     }
 
-
     @FXML
     protected void btCadastro(ActionEvent e){
         MainJavaFX.changeScreen("cadastro");
     }
-
-
 
 }
 
