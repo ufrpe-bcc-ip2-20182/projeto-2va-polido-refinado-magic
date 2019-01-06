@@ -8,6 +8,16 @@ import javafx.stage.Stage;
 
 public class MainJavaFX extends Application {
 
+    private static MainJavaFX instance;
+
+    public static MainJavaFX getInstance(){
+        if(instance == null){
+            instance = new MainJavaFX();
+        }
+        return instance;
+    }
+
+    private static Stage primaryStage;
     private static Stage stage;
     private static Scene sceneLogin;
     private static Scene sceneCadastro;
@@ -55,6 +65,13 @@ public class MainJavaFX extends Application {
         }
     }
 
+    public void changeStage(Stage stage){
+        this.primaryStage = stage;
+    }
+
+    public Stage getPrimaryStage(){
+        return this.primaryStage;
+    }
 
     public static void main(String[] args){
         launch(args);
