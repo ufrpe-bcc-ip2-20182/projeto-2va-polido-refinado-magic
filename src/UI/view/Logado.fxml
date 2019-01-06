@@ -17,9 +17,9 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Pagamentos">
             <items>
-              <MenuItem mnemonicParsing="false" text="Adicionar" />
+              <MenuItem mnemonicParsing="false" onAction="#btAdd" text="Adicionar" />
                   <MenuItem mnemonicParsing="false" text="Remover" />
-                  <MenuItem mnemonicParsing="false" text="Pendências" />
+                  <MenuItem mnemonicParsing="false" text="Atrasadas" />
                   <MenuItem disable="true" mnemonicParsing="false" text="Relatório" />
             </items>
           </Menu>

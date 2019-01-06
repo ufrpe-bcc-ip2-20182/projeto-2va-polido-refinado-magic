@@ -29,6 +29,9 @@ public class MainJavaFX extends Application {
         Parent fxmlLogado = FXMLLoader.load(getClass().getResource("/UI/view/Logado.fxml"));
         sceneLogado = new Scene(fxmlLogado, 600, 400);
 
+        Parent fxmlAdd = FXMLLoader.load(getClass().getResource("/UI/view/Add.fxml"));
+        sceneAdd = new Scene(fxmlAdd, 600, 400);
+
         primaryStage.setScene(sceneLogin);
         primaryStage.show();
     }

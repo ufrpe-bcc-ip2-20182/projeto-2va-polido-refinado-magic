@@ -7,10 +7,6 @@ import javafx.fxml.FXML;
 
 public class MainController {
 
-
-    public MainController() {
-    }
-
     @FXML
     protected void btCadastro(ActionEvent e){
         MainJavaFX.changeScreen("cadastro");

@@ -11,4 +11,8 @@ public class LogadoController {
         MainJavaFX.changeScreen("login");
     }
 
+    @FXML
+    protected void btAdd(ActionEvent e){
+        MainJavaFX.changeScreen("add");
+    }
 }
