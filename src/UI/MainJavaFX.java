@@ -1,5 +1,6 @@
 package UI;
 
+import arquivo.Arquivo;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -29,6 +30,9 @@ public class MainJavaFX extends Application {
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
         primaryStage.setTitle("PROGASTOS");
+
+        Arquivo arquivo = new Arquivo();
+
 
         Parent fxmlLogin = FXMLLoader.load(getClass().getResource("/UI/view/Login.fxml"));
         sceneLogin = new Scene(fxmlLogin, 600,400);
