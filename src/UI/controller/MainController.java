@@ -41,7 +41,6 @@ public class MainController {
     private ArrayList<String> senhas;
 
     public void initialize(){
-        sistema = lerArquivo.ler(arquivo.getArquivo());
         this.sis = MainJavaFX.getInstance();
         contas = Sistema.getContas();
 
@@ -67,6 +66,7 @@ public class MainController {
         Parent root = null;
         boolean loginOk = false;
         try{
+            sistema = lerArquivo.ler(arquivo.getArquivo());
             for (int i = 0; i < contas.size(); i++){
                 logins.add(contas.get(i).getLogin());
                 senhas.add(contas.get(i).getSenha());
