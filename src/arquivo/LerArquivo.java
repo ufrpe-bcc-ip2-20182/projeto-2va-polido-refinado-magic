@@ -102,7 +102,10 @@ public class LerArquivo
                 else if (input.equals("<FIM-CONTA>"))
                 {
                     sistema.addContas(novaConta);
-                    novaConta.setBoletos(); //o set de conta para boletos faz que todos os boletos inseridos sejam deletados
+                    if(novaConta.getBoletos()!=NULL)
+                    {
+                        novaConta.setBoletos();//o set de conta para boletos faz que todos os boletos inseridos sejam deletados
+                    }
                 }
                 else
                 {
