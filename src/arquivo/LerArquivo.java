@@ -9,8 +9,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public abstract class LerArquivo
+public class LerArquivo
 {
+
     public static Sistema ler(File arquivo)
     {
         FileReader arquivoleitura = null;
@@ -24,7 +25,7 @@ public abstract class LerArquivo
             return null;
         }
 
-        BufferedReader ler = new BufferedReader(arquivoleitura);
+        BufferedReader leitor = new BufferedReader(arquivoleitura);
 
         Sistema sistema = new Sistema();
         Conta novaConta = new Conta();
@@ -32,42 +33,51 @@ public abstract class LerArquivo
         Date data = new Date();
         SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
         String input;
-
         while(true)
         {
             try
             {
+                input = leitor.readLine();
+                if ("<NOVA-CONTA>".equals(input)) {
+                    String aux = leitor.readLine();
 
-                input = ler.readLine();
-                if (input == "<NOVA-CONTA>") {
-                    novaConta.setLogin(ler.readLine());
-                    novaConta.setSenha(ler.readLine());
-                    novaConta.setNome(ler.readLine());
-                    novaConta.setCpf(ler.readLine());
+                    System.out.println(aux);
+                    novaConta.setLogin(aux);
 
+                    aux = leitor.readLine();
+                    System.out.println(aux);
+                    novaConta.setSenha(aux);
+
+                    novaConta.setNome(leitor.readLine());
+                    novaConta.setCpf(leitor.readLine());
+
+                    //data de nascimento
                     try {
-                        data = f.parse(ler.readLine());
+                        data = f.parse(leitor.readLine());
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
 
                     novaConta.setDatadenascimento(data);
 
+                    //data de criação
                     try {
-                        data = f.parse(ler.readLine());
+                        data = f.parse(leitor.readLine());
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
 
                     novaConta.setDataDeCriacao(data);
-                    novaConta.setStatus(Boolean.getBoolean(ler.readLine()));
-                    novaConta.setSaldo(Double.parseDouble(ler.readLine()));
-                } else if (input == "<NOVO-BOLETO>") {
-                    novoBoleto.setNomeDoBoleto(ler.readLine());
-                    novoBoleto.setValor(Double.parseDouble(ler.readLine()));
+
+
+                    novaConta.setStatus(Boolean.getBoolean(leitor.readLine()));
+                    novaConta.setSaldo(Double.parseDouble(leitor.readLine()));
+                } else if (input.equals("<NOVO-BOLETO>")) {
+                    novoBoleto.setNomeDoBoleto(leitor.readLine());
+                    novoBoleto.setValor(Double.parseDouble(leitor.readLine()));
 
                     try {
-                        data = f.parse(ler.readLine());
+                        data = f.parse(leitor.readLine());
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
@@ -75,20 +85,28 @@ public abstract class LerArquivo
                     novoBoleto.setDataDeCriacao(data);
 
                     try {
-                        data = f.parse(ler.readLine());
+                        data = f.parse(leitor.readLine());
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
 
                     novoBoleto.setDataDeVencimento(data);
-                    novoBoleto.setValor(Double.parseDouble(ler.readLine()));
-                    novoBoleto.setPagamento(Boolean.parseBoolean(ler.readLine()));
-                } else if (input == "<FIM-BOLETO>") {
+                    novoBoleto.setValor(Double.parseDouble(leitor.readLine()));
+                    novoBoleto.setPagamento(Boolean.parseBoolean(leitor.readLine()));
+
+                }
+
+                else if (input.equals("<FIM-BOLETO>"))
+                {
                     novaConta.setBoletos(novoBoleto);
-                } else if (input == "<FIM-CONTA>") {
+                }
+                else if (input.equals("<FIM-CONTA>"))
+                {
                     sistema.addContas(novaConta);
                     novaConta.setBoletos(); //o set de conta para boletos faz que todos os boletos inseridos sejam deletados
-                } else {
+                }
+                else
+                {
                     break;
                 }
 

@@ -1,10 +1,10 @@
 <NOVA-CONTA>
-a
-null
-a
+vitao
+vitao
+all
 1
-Sun Oct 01 00:00:00 GFT 2000
-Sun Dec 30 00:00:00 GFT 2018
+Wed Nov 01 00:00:00 GFT 2000
+Sun Jan 06 00:00:00 GFT 2019
 false
 0.0
 <FIM-CONTA>

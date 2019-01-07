@@ -96,6 +96,7 @@ public class Adicionar
             System.out.println("Senha 1: " + senha);
             System.out.println("Senha 2: " + senha2);
         }
+        nova.setSenha(senha);
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date dataaux = null;
         try

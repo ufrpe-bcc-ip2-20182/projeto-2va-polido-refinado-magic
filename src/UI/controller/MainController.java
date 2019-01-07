@@ -1,5 +1,8 @@
 package UI.controller;
 import UI.MainJavaFX;
+import arquivo.Arquivo;
+import arquivo.LerArquivo;
+import beans.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -13,7 +16,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 
+import java.awt.image.AreaAveragingScaleFilter;
+import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class MainController {
@@ -27,8 +33,19 @@ public class MainController {
     private String user;
     private String pass;
 
+    private Sistema sistema = new Sistema();
+    private Arquivo arquivo = new Arquivo();
+    private LerArquivo lerArquivo = new LerArquivo();
+    private ArrayList<Conta> contas;
+    private ArrayList<String> logins;
+    private ArrayList<String> senhas;
+
     public void initialize(){
+        sistema = lerArquivo.ler(arquivo.getArquivo());
         this.sis = MainJavaFX.getInstance();
+        contas = Sistema.getContas();
+
+        //casos de teste
         this.user = "adm";
         this.pass = "123";
 
@@ -50,8 +67,13 @@ public class MainController {
         Parent root = null;
         boolean loginOk = false;
         try{
-            if(userField.getText().equals(user)){
-                if(passwordField.getText().equals(pass)){
+            for (int i = 0; i < contas.size(); i++){
+                logins.add(contas.get(i).getLogin());
+                senhas.add(contas.get(i).getSenha());
+            }
+            if(logins.contains(userField.getText()))
+            {
+                if(senhas.contains(passwordField.getText())){
                     stage = (Stage) loginButton.getScene().getWindow();
                     root = (Parent) FXMLLoader.load(getClass().getResource("/UI/view/Logado.fxml"));
                     loginOk = true;

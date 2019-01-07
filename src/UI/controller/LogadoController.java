@@ -4,7 +4,15 @@ import UI.MainJavaFX;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
+import java.awt.*;
+
 public class LogadoController {
+
+    @FXML private TextField texto;
+
+    public TextField getTexto() {
+        return texto;
+    }
 
     @FXML
     protected void btSair(ActionEvent e){

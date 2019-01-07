@@ -44,7 +44,7 @@ public abstract class Verif
             cortado[i] = texto.substring(i,i+1);
             System.out.println("Posição " + i + ": " + cortado[i]);
         }
-        if((cortado[3] == ".") && (cortado[7] == ".") && (cortado[11] == "-"))
+        if((".".equals(cortado[3])) && (".".equals(cortado[7])) && ("-".equals(cortado[11])))
         {
             return true;
         }
