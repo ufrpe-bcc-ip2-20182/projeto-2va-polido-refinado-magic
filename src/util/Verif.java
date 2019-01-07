@@ -35,6 +35,12 @@ public abstract class Verif
         return cortado;
     }
 
+    public static String[] cortarEspacos(String x)
+    {
+        String cortado[] = x.split(" ");
+        return cortado;
+    }
+
     public static boolean cpfcerto(String texto)
     {
         //ta printando errado

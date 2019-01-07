@@ -1,9 +1,11 @@
 package util;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class Getters
@@ -13,6 +15,25 @@ public class Getters
         Calendar c = Calendar.getInstance();
         String dataDeHoje = String.valueOf(c.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(c.get(Calendar.MONTH)+1) + "/" + String.valueOf(c.get(Calendar.YEAR));
         return dataDeHoje;
+    }
+
+    public static Date converterData(String data)
+    {
+        String[] partes = Verif.cortarEspacos(data);
+        data = partes[1] + "/" + partes[2] + "/" + partes[5];
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+        Date dataretornada = null;
+
+        try
+        {
+            dataretornada = dateFormat.parse(data);
+        }
+        catch (ParseException x)
+        {
+            //Ignora amore :)
+        }
+        return dataretornada;
     }
 
     public static Date pegarData()

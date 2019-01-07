@@ -50,7 +50,6 @@ public class SalvarArquivo
                 escrever.println(contaAux.getDataDeCriacao());
                 escrever.println(contaAux.isStatus());
                 escrever.println(contaAux.getSaldo());
-
                 boletos = contaAux.getBoletos();
 
                 if(boletos!=null)

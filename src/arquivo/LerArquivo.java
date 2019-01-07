@@ -3,11 +3,14 @@ package arquivo;
 import beans.Boleto;
 import beans.Conta;
 import beans.Sistema;
+import util.Getters;
 
 import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class LerArquivo
 {
@@ -52,23 +55,19 @@ public class LerArquivo
                     novaConta.setCpf(leitor.readLine());
 
                     //data de nascimento
-                    try {
-                        data = f.parse(leitor.readLine());
-                    } catch (ParseException e) {
-                        e.printStackTrace();
-                    }
-
+                    aux = leitor.readLine();
+                    data = Getters.converterData(aux);
                     novaConta.setDatadenascimento(data);
 
                     //data de criação
-                    try {
+                    aux = leitor.readLine();
+                    data = Getters.converterData(aux);
+                    novaConta.setDataDeCriacao(data);
+                    /*try {
                         data = f.parse(leitor.readLine());
                     } catch (ParseException e) {
                         e.printStackTrace();
-                    }
-
-                    novaConta.setDataDeCriacao(data);
-
+                    }*/
 
                     novaConta.setStatus(Boolean.getBoolean(leitor.readLine()));
                     novaConta.setSaldo(Double.parseDouble(leitor.readLine()));
