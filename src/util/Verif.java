@@ -44,84 +44,18 @@ public abstract class Verif
     public static boolean cpfcerto(String texto)
     {
         //ta printando errado
-        String cortado[] = new String[texto.length()];
-        for(int i = 0; i < texto.length(); i++)
-        {
-            cortado[i] = texto.substring(i,i+1);
-            System.out.println("Posição " + i + ": " + cortado[i]);
-        }
-        if((".".equals(cortado[3])) && (".".equals(cortado[7])) && ("-".equals(cortado[11])))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-
-    public static boolean verificarcpf(String texto)
-    {
-        if(texto.length()!=14)
-        {
-          return false;
-        }
-
         String cortado[] = cortarPalavras(texto);
         for(int i = 0; i < texto.length(); i++)
         {
-                if(i == 3 || i == 7)
-                {
-                    if(!(cortado[i] == "."))
-                    {
-                        return false;
-                    }
-                }
-                else if(i == 11)
-                {
-                    if(!(cortado[i] == "-"))
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    if(!(48 <= Double.parseDouble(cortado[i]) && Double.parseDouble(cortado[i]) <= 57))
-                    {
-                        return false;
-                    }
-                }
-             }
-             return true;
-      }
-
-    public static boolean cpfcerto2(String texto)
-    {
-        if(texto.length()!=14)
-        {
-            return false;
-        }
-
-        String caracteres[] = cortarPalavras(texto);
-
-        for(int i=0;i<texto.length();i++)
-        {
-            int aux=0;
-            for(int j=0;j<=9;j++)
+            if(!(i == 3 || i == 7 || i == 11))
             {
-                if( caracteres[i].equals(String.valueOf(j)))
+                if(!(cortado[i].charAt(0) >= 48 && cortado[i].charAt(0) <= 57))
                 {
-                    aux++;
+                    return false;
                 }
             }
-            if(aux==0)
-            {
-                return false;
-            }
         }
-
-        if( (caracteres[3].equals(".")) && (caracteres[7].equals(".")) && (caracteres[11].equals("-")) )
+        if(texto.charAt(3) == '.' && texto.charAt(7) == '.' && texto.charAt(11) == '-')
         {
             return true;
         }
@@ -129,7 +63,6 @@ public abstract class Verif
         {
             return false;
         }
-
     }
 
     public static Conta existeConta(String nome, Sistema sis)
