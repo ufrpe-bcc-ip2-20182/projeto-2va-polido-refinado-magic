@@ -41,6 +41,7 @@ public class MainController {
     private ArrayList<String> senhas;
 
     public void initialize(){
+        sistema = lerArquivo.ler(arquivo.getArquivo());
         this.sis = MainJavaFX.getInstance();
         contas = Sistema.getContas();
 
@@ -66,11 +67,14 @@ public class MainController {
         Parent root = null;
         boolean loginOk = false;
         try{
-            sistema = lerArquivo.ler(arquivo.getArquivo());
+            System.out.println("Dentro do try");
             for (int i = 0; i < contas.size(); i++){
+                System.out.println("Dentro do for :D");
                 logins.add(contas.get(i).getLogin());
                 senhas.add(contas.get(i).getSenha());
             }
+            System.out.println("Login contains:" + logins.contains(userField.getText()));
+            System.out.println("Senha contains:" + senhas.contains(passwordField.getText()));
             if(logins.contains(userField.getText()))
             {
                 if(senhas.contains(passwordField.getText())){
