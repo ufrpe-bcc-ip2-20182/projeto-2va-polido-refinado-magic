@@ -1,0 +1,21 @@
+Olá pessoal,
+
+Primeiramente gostaria de parabenizar pelo projeto, acho que vocês estão evoluindo na implementação e principalmente aprendendo bastante. 
+Queria apenas deixar um feedback da situação atual:
+
+- Talvez o nome mais adequado para a classe Getters fosse algo como DateUtils nao?
+- O mesmo pode se dizer da classe Verif, que acho que seria algo como ValidationUtils ou ValidacaoUtils?
+- A tela de login aparentemente so verifica se o usuario é adm e a senha é 123… Esse tipo de verificação “Hard-Coded” é considerada uma má prática. O ideal seria que essa validação fosse feita usando as classes de negocio, lendo de um arquivo, etc.
+- Não é que esteja completamente errado, pode ter sido uma opção da equipe não separar completamente as camadas de persistencia (e.g., classes do pacote arquivo) dos controllers (UI). Mas lembrem que o ideal seria fazer essa separação, de modo que uma mudança no tipo de persistencia adotado (por exemplo, caso se resolva salvar em banco de dados no futuro) essa mudança não deve impactar na camada de UI. Para alcançar isso normalmente o padrão Data Access Object (DAO) seja o mais indicado.
+- Pendente:
+	- Jar para executar o projeto
+	- Instruções sobre como executar o programa
+- Desejável: 
+	- Screenshots de algumas telas no README.md
+
+Qualquer duvida podem enviar um email para mim ou para o monitor.
+
+Abs
+
+Andre
+
