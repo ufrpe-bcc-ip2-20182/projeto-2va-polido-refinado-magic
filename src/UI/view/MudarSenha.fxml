@@ -11,7 +11,7 @@
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="addButton" layoutX="261.0" layoutY="277.0" mnemonicParsing="false" text="Confirmar" />
+            <Button fx:id="addButton" layoutX="169.0" layoutY="287.0" mnemonicParsing="false" text="Confirmar" />
             <Text layoutX="131.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nova Senha:" />
             <Text layoutX="102.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar Senha:" />
             <PasswordField fx:id="passAntiga" layoutX="225.0" layoutY="123.0" prefHeight="27.0" prefWidth="264.0" />
@@ -20,6 +20,7 @@
             <Text layoutX="165.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" />
             <Text layoutX="156.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário:" />
             <TextField fx:id="userField" layoutX="225.0" layoutY="82.0" prefHeight="27.0" prefWidth="264.0" />
+            <Button layoutX="357.0" layoutY="287.0" mnemonicParsing="false" onAction="#btSair" text="Cancelar" />
          </children>
       </Pane>
    </center>

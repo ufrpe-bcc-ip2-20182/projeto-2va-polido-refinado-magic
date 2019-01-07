@@ -1,12 +1,56 @@
 <NOVA-CONTA>
-eu
-123
+eu2
+asdasd
 Fernanda
 123.123.123-12
 Tue Apr 11 00:00:00 BRT 2000
 Mon Jan 07 00:00:00 BRT 2019
 false
-123456.98
-email
+99999.0
+asdasdsad
+<FIM-CONTA>
+<NOVA-CONTA>
+eu2
+asdasd
+Fernanda
+123.123.123-12
+Tue Apr 11 00:00:00 BRT 2000
+Mon Jan 07 00:00:00 BRT 2019
+false
+99999.0
+asdasdsad
+<FIM-CONTA>
+<NOVA-CONTA>
+eu2
+asdasd
+Fernanda
+123.123.123-12
+Tue Apr 11 00:00:00 BRT 2000
+Mon Jan 07 00:00:00 BRT 2019
+false
+99999.0
+asdasdsad
+<FIM-CONTA>
+<NOVA-CONTA>
+eu2
+asdasd
+rogerio
+10000000
+Fri Oct 10 00:00:00 BRT 10
+Mon Jan 07 00:00:00 BRT 2019
+false
+99999.0
+asdasdsad
+<FIM-CONTA>
+<NOVA-CONTA>
+eu2
+asdasd
+rogerio
+10000000
+Fri Oct 10 00:00:00 BRT 10
+Mon Jan 07 00:00:00 BRT 2019
+false
+99999.0
+asdasdsad
 <FIM-CONTA>
 <FIM-ARQUIVO>

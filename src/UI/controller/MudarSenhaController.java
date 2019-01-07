@@ -27,6 +27,8 @@ public class MudarSenhaController {
     private MainJavaFX sis;
     private int usuario;
 
+
+
     @FXML TextField userField;
     @FXML PasswordField passAntiga;
     @FXML PasswordField passField;
@@ -109,4 +111,7 @@ public class MudarSenhaController {
         this.usuario = indice;
     }
 
+    @FXML
+    protected void btSair(ActionEvent e){ MainJavaFX.changeScreen("logado");
+    }
 }
