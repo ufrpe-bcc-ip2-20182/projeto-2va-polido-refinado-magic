@@ -3,6 +3,7 @@ package UI.controller;
 import UI.MainJavaFX;
 import arquivo.Arquivo;
 import arquivo.LerArquivo;
+import arquivo.SalvarArquivo;
 import beans.Conta;
 import beans.Sistema;
 import javafx.event.ActionEvent;
@@ -149,7 +150,7 @@ public class CadastroController {
         }
 
         String saldo;
-        Double valor;
+        Double valor = null;
         saldo = saldoField.getText();
         if(saldo !=  null) {
             valor = Double.parseDouble(saldo);
@@ -163,6 +164,21 @@ public class CadastroController {
                 alert.showAndWait();
             }
         }
+
+        Conta novaConta = new Conta();
+        novaConta.setNome(nome);
+        novaConta.setDatadenascimento(data2);
+        novaConta.setDataDeCriacao(data);
+        novaConta.setCpf(cpf);
+        novaConta.setEmail(email);
+        novaConta.setLogin(usuario);
+        novaConta.setSenha(senha);
+        novaConta.setSaldo(valor);
+        this.sistema.addContas(novaConta);
+
+        SalvarArquivo salvar = new SalvarArquivo();
+        salvar.salvar(sistema, arquivo.getArquivo());
+
     }
 
     public void setApp(MainJavaFX sis){

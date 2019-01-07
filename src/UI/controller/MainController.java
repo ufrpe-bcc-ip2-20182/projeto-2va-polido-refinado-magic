@@ -92,6 +92,7 @@ public class MainController {
                 alert.showAndWait();
             }
             if(loginOk){
+
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.setResizable(true);

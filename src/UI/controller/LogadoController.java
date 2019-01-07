@@ -23,4 +23,9 @@ public class LogadoController {
     protected void btAdd(ActionEvent e){
         MainJavaFX.changeScreen("add");
     }
+
+    @FXML
+    protected void btMudarSenha(ActionEvent e){
+        MainJavaFX.changeScreen("mudarSenha");
+    }
 }

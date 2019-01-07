@@ -1,11 +1,12 @@
 <NOVA-CONTA>
-admin
+eu
 123
-all
-1
-Wed Nov 01 00:00:00 GFT 2000
-Sun Jan 06 00:00:00 GFT 2019
+Fernanda
+123.123.123-12
+Tue Apr 11 00:00:00 BRT 2000
+Mon Jan 07 00:00:00 BRT 2019
 false
-0.0
+123456.98
+email
 <FIM-CONTA>
 <FIM-ARQUIVO>

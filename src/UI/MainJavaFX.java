@@ -46,6 +46,9 @@ public class MainJavaFX extends Application {
         Parent fxmlAdd = FXMLLoader.load(getClass().getResource("/UI/view/Add.fxml"));
         sceneAdd = new Scene(fxmlAdd, 600, 400);
 
+        Parent fxmlMudarSenha = FXMLLoader.load(getClass().getResource("/UI/view/MudarSenha.fxml"));
+        sceneMudarSenha = new Scene(fxmlMudarSenha, 600, 400);
+
         primaryStage.setScene(sceneLogin);
         primaryStage.show();
     }

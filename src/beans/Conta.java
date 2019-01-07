@@ -15,11 +15,14 @@ public class Conta extends Pessoa
     private static double saldo;
     private static boolean status;
     private static ArrayList<Boleto> boletos;
+    private static String email;
+
+    public void setEmail(String email){this.email = email; }
+    public String getEmail(){return email;}
 
     public void setId(String id) {
         this.id = id;
     }
-
     public String getId() {
         return id;
     }
@@ -28,7 +31,6 @@ public class Conta extends Pessoa
     {
         return login;
     }
-
     public void setLogin(String login)
     {
         this.login = login;
@@ -38,7 +40,6 @@ public class Conta extends Pessoa
     {
         return senha;
     }
-
     public void setSenha(String senha)
     {
         this.senha = senha;
@@ -48,7 +49,6 @@ public class Conta extends Pessoa
     {
         return dataDeCriacao;
     }
-
     public void setDataDeCriacao(Date dataDeCriacao)
     {
         this.dataDeCriacao = dataDeCriacao;
@@ -58,7 +58,6 @@ public class Conta extends Pessoa
     {
         return saldo;
     }
-
     public void setSaldo(double saldo)
     {
         this.saldo = saldo;
@@ -68,7 +67,6 @@ public class Conta extends Pessoa
     {
         return status;
     }
-
     public void setStatus(boolean status)
     {
         this.status = status;
@@ -78,7 +76,6 @@ public class Conta extends Pessoa
     {
         return this.boletos;
     }
-
     public void setBoletos(Boleto boleto)
     {
         this.boletos.add(boleto);
@@ -88,7 +85,6 @@ public class Conta extends Pessoa
     {
         this.boletos.clear();
     }
-
     public void removeBoleto(Boleto boleto)
     {
         this.boletos.remove(boleto);

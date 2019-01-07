@@ -25,7 +25,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Gerenciar Conta">
             <items>
-              <MenuItem mnemonicParsing="false" text="Mudar Senha" />
+              <MenuItem mnemonicParsing="false" onAction="#btMudarSenha" text="Mudar Senha" />
                   <MenuItem mnemonicParsing="false" text="Excluir Conta" />
             </items>
           </Menu>

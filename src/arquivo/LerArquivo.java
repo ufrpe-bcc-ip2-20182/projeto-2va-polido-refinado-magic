@@ -69,6 +69,8 @@ public class LerArquivo
 
                     novaConta.setStatus(Boolean.getBoolean(leitor.readLine()));
                     novaConta.setSaldo(Double.parseDouble(leitor.readLine()));
+                    novaConta.setEmail(leitor.readLine());
+
                 } else if (input.equals("<NOVO-BOLETO>")) {
                     novoBoleto.setNomeDoBoleto(leitor.readLine());
                     novoBoleto.setValor(Double.parseDouble(leitor.readLine()));
