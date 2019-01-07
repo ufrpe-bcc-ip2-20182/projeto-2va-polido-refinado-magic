@@ -44,11 +44,9 @@ public class LerArquivo
                 if ("<NOVA-CONTA>".equals(input)) {
                     String aux = leitor.readLine();
 
-                    System.out.println(aux);
                     novaConta.setLogin(aux);
 
                     aux = leitor.readLine();
-                    System.out.println(aux);
                     novaConta.setSenha(aux);
 
                     novaConta.setNome(leitor.readLine());

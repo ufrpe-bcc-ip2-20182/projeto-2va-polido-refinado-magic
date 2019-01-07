@@ -61,7 +61,7 @@ public abstract class Verif
     }
 
 
-    /*public static boolean verificarcpf(String texto)
+    public static boolean verificarcpf(String texto)
     {
         if(texto.length()!=14)
         {
@@ -94,7 +94,7 @@ public abstract class Verif
                 }
              }
              return true;
-      }*/
+      }
 
     public static boolean cpfcerto2(String texto)
     {

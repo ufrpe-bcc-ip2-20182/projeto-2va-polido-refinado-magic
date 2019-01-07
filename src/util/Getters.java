@@ -94,7 +94,6 @@ public class Getters
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
         Date dataretornada = null;
-        System.out.println(data);
         try
         {
             dataretornada = dateFormat.parse(data);
