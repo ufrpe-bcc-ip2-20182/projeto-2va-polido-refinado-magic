@@ -1,56 +1,45 @@
 <NOVA-CONTA>
-eu2
-asdasd
+fernandaalbuquerque
+12345
+Administrador
+000.000.000-00
+Mon Jan 01 00:00:00 BRT 1000
+Mon Jan 07 00:00:00 BRT 2019
+false
+1.23456789E8
+fernandaocalbuquerque@gmail.com
+<FIM-CONTA>
+<NOVA-CONTA>
+fernandaalbuquerque
+12345
+Administrador
+000.000.000-00
+Mon Jan 01 00:00:00 BRT 1000
+Mon Jan 07 00:00:00 BRT 2019
+false
+1.23456789E8
+fernandaocalbuquerque@gmail.com
+<FIM-CONTA>
+<NOVA-CONTA>
+fernandaalbuquerque
+12345
+Administrador
+000.000.000-00
+Mon Jan 01 00:00:00 BRT 1000
+Mon Jan 07 00:00:00 BRT 2019
+false
+1.23456789E8
+fernandaocalbuquerque@gmail.com
+<FIM-CONTA>
+<NOVA-CONTA>
+fernandaalbuquerque
+12345
 Fernanda
-123.123.123-12
+057.280.124-69
 Tue Apr 11 00:00:00 BRT 2000
 Mon Jan 07 00:00:00 BRT 2019
 false
-99999.0
-asdasdsad
-<FIM-CONTA>
-<NOVA-CONTA>
-eu2
-asdasd
-Fernanda
-123.123.123-12
-Tue Apr 11 00:00:00 BRT 2000
-Mon Jan 07 00:00:00 BRT 2019
-false
-99999.0
-asdasdsad
-<FIM-CONTA>
-<NOVA-CONTA>
-eu2
-asdasd
-Fernanda
-123.123.123-12
-Tue Apr 11 00:00:00 BRT 2000
-Mon Jan 07 00:00:00 BRT 2019
-false
-99999.0
-asdasdsad
-<FIM-CONTA>
-<NOVA-CONTA>
-eu2
-asdasd
-rogerio
-10000000
-Fri Oct 10 00:00:00 BRT 10
-Mon Jan 07 00:00:00 BRT 2019
-false
-99999.0
-asdasdsad
-<FIM-CONTA>
-<NOVA-CONTA>
-eu2
-asdasd
-rogerio
-10000000
-Fri Oct 10 00:00:00 BRT 10
-Mon Jan 07 00:00:00 BRT 2019
-false
-99999.0
-asdasdsad
+1.23456789E8
+fernandaocalbuquerque@gmail.com
 <FIM-CONTA>
 <FIM-ARQUIVO>

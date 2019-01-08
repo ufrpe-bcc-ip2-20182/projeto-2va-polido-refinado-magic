@@ -43,14 +43,14 @@ public class CadastroController {
 
     private Sistema sistema = new Sistema();
     private Arquivo arquivo = new Arquivo();
-    private LerArquivo lerArquivo = new LerArquivo();
+    private  LerArquivo lerArquivo = new LerArquivo();
     private ArrayList<Conta> contas = new ArrayList<>();
     private ArrayList<String> logins = new ArrayList<>();
 
     public void initialize(){
         sistema = lerArquivo.ler(arquivo.getArquivo());
         this.sis = MainJavaFX.getInstance();
-        contas = sistema.getContas();
+        contas = beans.Sistema.getContas();
 
         this.passField.setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.ENTER) {
@@ -86,15 +86,15 @@ public class CadastroController {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        if (data.after(data2) == true) {
+        if (data.after(data2)==true) {
             System.out.println(data2);
             System.out.println(data);
         } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Falha de Cadastro");
-            alert.setHeaderText("Informações inválidas");
-            alert.setContentText("Data inválida");
-            alert.showAndWait();
+            Alert alert1 = new Alert(Alert.AlertType.ERROR);
+            alert1.setTitle("Falha de Cadastro");
+            alert1.setHeaderText("Informações inválidas");
+            alert1.setContentText("Data inválida");
+            alert1.showAndWait();
         }
 
 
@@ -103,11 +103,11 @@ public class CadastroController {
         if(true){
             System.out.println(cpf);
         }else{
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Falha de Cadastro");
-            alert.setHeaderText("Informações inválidas");
-            alert.setContentText("CPF inválido");
-            alert.showAndWait();
+            Alert alert2 = new Alert(Alert.AlertType.ERROR);
+            alert2.setTitle("Falha de Cadastro");
+            alert2.setHeaderText("Informações inválidas");
+            alert2.setContentText("CPF inválido");
+            alert2.showAndWait();
         }
 
         String email;
@@ -129,11 +129,11 @@ public class CadastroController {
         if (aux == false) {
             System.out.println(usuario);
         }else{
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Falha de Cadastro");
-            alert.setHeaderText("Informações inválidas");
-            alert.setContentText("Usuário inválido");
-            alert.showAndWait();
+            Alert alert3 = new Alert(Alert.AlertType.ERROR);
+            alert3.setTitle("Falha de Cadastro");
+            alert3.setHeaderText("Informações inválidas");
+            alert3.setContentText("Usuário inválido");
+            alert3.showAndWait();
         }
 
         String senha, senha2;
@@ -142,11 +142,11 @@ public class CadastroController {
         if(senha.equals(senha2) == true){
             System.out.println(senha);
         }else{
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Falha de Cadastro");
-            alert.setHeaderText("Informações inválidas");
-            alert.setContentText("Senhas não correspondem");
-            alert.showAndWait();
+            Alert alert4 = new Alert(Alert.AlertType.ERROR);
+            alert4.setTitle("Falha de Cadastro");
+            alert4.setHeaderText("Informações inválidas");
+            alert4.setContentText("Senhas não correspondem");
+            alert4.showAndWait();
         }
 
         String saldo;
@@ -157,11 +157,11 @@ public class CadastroController {
             if (valor > 0) {
                 System.out.println(valor);
             } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Falha de Cadastro");
-                alert.setHeaderText("Informações inválidas");
-                alert.setContentText("Saldo Inválido");
-                alert.showAndWait();
+                Alert alert5 = new Alert(Alert.AlertType.ERROR);
+                alert5.setTitle("Falha de Cadastro");
+                alert5.setHeaderText("Informações inválidas");
+                alert5.setContentText("Saldo Inválido");
+                alert5.showAndWait();
             }
         }
 
