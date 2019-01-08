@@ -25,3 +25,6 @@ Veja o diagrama [aqui](https://drive.google.com/open?id=1nYKXyGROEK1R7LwuO4a2d_J
 
 ### Algumas telas que foram implementadas
 <p align="center"><img src="https://github.com/ufrpe-bcc-ip2-20182/projeto-2va-polido-refinado-magic/blob/master/src/Images/Login.png"></p>
+<p align="center"><img src="https://github.com/ufrpe-bcc-ip2-20182/projeto-2va-polido-refinado-magic/blob/master/src/Images/Cadastro.png"></p>
+<p align="center"><img src="https://github.com/ufrpe-bcc-ip2-20182/projeto-2va-polido-refinado-magic/blob/master/src/Images/AdicionarPagamento.png"></p>
+<p align="center"><img src="https://github.com/ufrpe-bcc-ip2-20182/projeto-2va-polido-refinado-magic/blob/master/src/Images/MudarSenha.png"></p>
