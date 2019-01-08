@@ -1,39 +1,6 @@
 <NOVA-CONTA>
-fernandaalbuquerque
-12345
-Administrador
-000.000.000-00
-Mon Jan 01 00:00:00 BRT 1000
-Mon Jan 07 00:00:00 BRT 2019
-false
-1.23456789E8
-fernandaocalbuquerque@gmail.com
-<FIM-CONTA>
-<NOVA-CONTA>
-fernandaalbuquerque
-12345
-Administrador
-000.000.000-00
-Mon Jan 01 00:00:00 BRT 1000
-Mon Jan 07 00:00:00 BRT 2019
-false
-1.23456789E8
-fernandaocalbuquerque@gmail.com
-<FIM-CONTA>
-<NOVA-CONTA>
-fernandaalbuquerque
-12345
-Administrador
-000.000.000-00
-Mon Jan 01 00:00:00 BRT 1000
-Mon Jan 07 00:00:00 BRT 2019
-false
-1.23456789E8
-fernandaocalbuquerque@gmail.com
-<FIM-CONTA>
-<NOVA-CONTA>
-fernandaalbuquerque
-12345
+adm
+123
 Fernanda
 057.280.124-69
 Tue Apr 11 00:00:00 BRT 2000

@@ -22,3 +22,9 @@ Veja o diagrama [aqui](https://drive.google.com/open?id=1nYKXyGROEK1R7LwuO4a2d_J
 
 ### Implantação
 [orientações gerais de como executar o sistema (arquivos de configuração, argumentos de linha de comando, etc.)]
+
+###Algumas telas que foram implementadas
+![Login](src/Images/Login.JPG)
+![Cadastro](src/Images/Cadastro.JPG)
+![Mudar Senha](src/Images/MudarSenha.JPG)
+![Adicionar Pagamento](src/Images/AdicionarPagamento.JPG)
