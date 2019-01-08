@@ -52,7 +52,7 @@ public class CadastroController {
         this.sis = MainJavaFX.getInstance();
         contas = sistema.getContas();
 
-        this.passField.setOnKeyPressed(e -> {
+        this.saldoField.setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.ENTER) {
                 cadastro();
             }
