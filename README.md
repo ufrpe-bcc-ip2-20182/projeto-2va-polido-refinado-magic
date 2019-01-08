@@ -24,4 +24,4 @@ Veja o diagrama [aqui](https://drive.google.com/open?id=1nYKXyGROEK1R7LwuO4a2d_J
 [orientações gerais de como executar o sistema (arquivos de configuração, argumentos de linha de comando, etc.)]
 
 ### Algumas telas que foram implementadas
-[Login](<p align="center"><img src="https://github.com/ufrpe-bcc-ip2-20182/projeto-2va-polido-refinado-magic/blob/master/src/Images/Login.png"></p>)
+(<p align="center"><img src="https://github.com/ufrpe-bcc-ip2-20182/projeto-2va-polido-refinado-magic/blob/master/src/Images/Login.png"></p>
