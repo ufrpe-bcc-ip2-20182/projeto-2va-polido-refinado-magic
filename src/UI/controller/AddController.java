@@ -8,10 +8,13 @@ import beans.Sistema;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
@@ -39,17 +42,45 @@ public class AddController {
         sistema = lerArquivo.ler(arquivo.getArquivo());
         this.sis = MainJavaFX.getInstance();
         contas = sistema.getContas();
-/*
-        this.passField.setOnKeyPressed(e -> {
-            if (e.getCode() == KeyCode.ENTER) {
-                cadastro();
-            }
-        });
-        this.cadastrarButton.setOnAction(new EventHandler<ActionEvent>() {
+
+        this.addButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                cadastro();
+                adicionar();
             }
-        });*/
+        });
+    }
+
+    public void adicionar()
+    {
+        Stage stage = null;
+        Parent root = null;
+
+        String nome = nomeField.getText();
+
+        Boolean pagamento;
+
+        Double valor = Double.parseDouble(valorPagField.getText());
+
+
+        if(pagoBox.isSelected()==true)
+        {
+            pagamento = true;
+        }
+
+        if(aPagarBox.isSelected()==true)
+        {
+            pagamento = false;
+        }
+
+        if( (pagoBox.isSelected()==true) && (aPagarBox.isSelected()==true) )
+        {
+            Alert alert2 = new Alert(Alert.AlertType.ERROR);
+            alert2.setTitle("Falha ao Adicionar");
+            alert2.setHeaderText("Informações inválidas");
+            alert2.setContentText("Selecione apenas uma das caixas");
+            alert2.showAndWait();
+        }
+
     }
 }

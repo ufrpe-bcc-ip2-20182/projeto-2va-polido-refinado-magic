@@ -13,7 +13,7 @@
          <children>
             <TextField fx:id="nomeField" layoutX="211.0" layoutY="63.0" prefHeight="27.0" prefWidth="282.0" />
             <TextField fx:id="dataDoPagamentoField" layoutX="212.0" layoutY="133.0" prefHeight="27.0" prefWidth="281.0" />
-            <TextField fx:id="valorPagField" layoutX="212.0" layoutY="200.0" prefHeight="27.0" prefWidth="283.0" text="R$" />
+            <TextField fx:id="valorPagField" layoutX="212.0" layoutY="200.0" prefHeight="27.0" prefWidth="283.0" />
             <Text layoutX="82.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data do Pagamento:" />
             <Text layoutX="121.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor a pagar:" />
             <Text layoutX="164.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
