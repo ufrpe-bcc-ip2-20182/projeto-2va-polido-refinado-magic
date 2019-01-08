@@ -62,7 +62,7 @@ public class MainController {
         });
     }
 
-    private void login() {
+    private void login(){
         Stage stage = null;
         Parent root = null;
         boolean loginOk = false;
@@ -71,9 +71,10 @@ public class MainController {
                 logins.add(contas.get(i).getLogin());
                 senhas.add(contas.get(i).getSenha());
             }
-            if(logins.contains(userField.getText())||userField.getText() == "adm")
+
+            if(logins.contains(userField.getText()))
             {
-                if(senhas.contains(passwordField.getText())||passwordField.getText() == "123"){
+                if(senhas.contains(passwordField.getText())){
                     stage = (Stage) loginButton.getScene().getWindow();
                     root = (Parent) FXMLLoader.load(getClass().getResource("/UI/view/Logado.fxml"));
                     loginOk = true;
@@ -95,6 +96,8 @@ public class MainController {
 
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
+                String tituloAtual = stage.getTitle();
+                stage.setTitle(tituloAtual +" - "+ (""+user.charAt(0)).toUpperCase() + user.substring(1, user.length()));
                 stage.setResizable(true);
                 sis.changeStage(stage);
             }
