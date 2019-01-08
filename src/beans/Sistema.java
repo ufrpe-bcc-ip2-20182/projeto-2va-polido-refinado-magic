@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Sistema
 {
-    private static ArrayList<Conta> contas = new ArrayList<>();
+    private ArrayList<Conta> contas = new ArrayList<>();
 
-    public static ArrayList<Conta> getContas()
+    public ArrayList<Conta> getContas()
     {
       return contas;
     }

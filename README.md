@@ -11,8 +11,8 @@ Um programa que auxilia o usuário com seus gastos (sejam mensais ou semanais), 
 - Victor Vidal
 
 ### Requisitos
-- versão do Java: 11
-- dependências (bibliotecas utilizadas, etc)
+- versão do Java: 8 ou superior
+- javaFX
 
 ### Funcionalidades
 [insira uma descrição básica das funcionalidades do sistema]

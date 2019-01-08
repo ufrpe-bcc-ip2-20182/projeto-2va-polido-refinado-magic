@@ -50,7 +50,7 @@ public class CadastroController {
     public void initialize(){
         sistema = lerArquivo.ler(arquivo.getArquivo());
         this.sis = MainJavaFX.getInstance();
-        contas = beans.Sistema.getContas();
+        contas = sistema.getContas();
 
         this.passField.setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.ENTER) {
