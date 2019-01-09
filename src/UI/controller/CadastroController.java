@@ -236,7 +236,7 @@ public class CadastroController {
 
             salvar.salvar(sistema, arquivo.getArquivo());
 
-            Alert alert5 = new Alert(Alert.AlertType.ERROR);
+            Alert alert5 = new Alert(Alert.AlertType.CONFIRMATION);
             alert5.setTitle("Aviso");
             alert5.setHeaderText("Cadastro Realizado com Sucesso");
             alert5.showAndWait();
