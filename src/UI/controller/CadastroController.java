@@ -185,7 +185,7 @@ public class CadastroController {
         boolean senhaok = false;
         senha = passField.getText();
         senha2 = passOkField.getText();
-        if(senha.equals(senha2) == true){
+        if(senha.equals(senha2)){
             if( (!senha.equals("<NOVA-CONTA>")) && (!senha.equals("NOVO-BOLETO>")) && (!senha.equals("<FIM-BOLETO>")) && (!senha.equals("<FIM-CONTA>")) && (!senha.equals("<FIM-ARQUIVO>")) )
             {
                senhaok = true;
@@ -211,9 +211,7 @@ public class CadastroController {
         saldo = saldoField.getText();
         if(saldo !=  null) {
             valor = Double.parseDouble(saldo);
-            if (valor > 0) {
-
-            } else {
+            if(valor < 0) {
                 Alert alert5 = new Alert(Alert.AlertType.ERROR);
                 alert5.setTitle("Falha de Cadastro");
                 alert5.setHeaderText("Informações inválidas");
