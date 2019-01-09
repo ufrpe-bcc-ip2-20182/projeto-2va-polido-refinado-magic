@@ -20,7 +20,7 @@ public class ArquivoContas
         }
     }
 
-    public void setArquivoContas()
+    private void setArquivoContas()
     {
         this.arquivo = new File(caminho + "\\src\\main\\java\\br\\ufrpe\\bcc\\ip2\\projeto\\arquivo\\arquivo1.txt");
         try {

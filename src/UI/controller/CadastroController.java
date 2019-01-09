@@ -103,9 +103,9 @@ public class CadastroController {
             alert1.showAndWait();
         }
 
-        if(dataFormato==true)
+        if(dataFormato)
         {
-            if (data.after(data2)==true) {
+            if (data.after(data2)) {
                 dataok = true;
             } else {
                 Alert alert1 = new Alert(Alert.AlertType.ERROR);
@@ -119,7 +119,7 @@ public class CadastroController {
         String cpf;
         boolean cpfok = false;
         cpf = CPFField.getText();
-        if(util.ValidationUtils.cpfcerto(cpf)==true){
+        if(util.ValidationUtils.cpfcerto(cpf)){
             cpfok = true;
         }else{
             Alert alert2 = new Alert(Alert.AlertType.ERROR);
@@ -158,7 +158,7 @@ public class CadastroController {
                 aux = true;
             }
         }
-        if (aux == false) {
+        if (!aux) {
 
             if( (!usuario.equals("<NOVA-CONTA>")) && (!usuario.equals("NOVO-BOLETO>")) && (!usuario.equals("<FIM-BOLETO>")) && (!usuario.equals("<FIM-CONTA>")) && (!usuario.equals("<FIM-ARQUIVO>")) )
             {
@@ -212,7 +212,7 @@ public class CadastroController {
         if(saldo !=  null) {
             valor = Double.parseDouble(saldo);
             if (valor > 0) {
-                System.out.println(valor);
+
             } else {
                 Alert alert5 = new Alert(Alert.AlertType.ERROR);
                 alert5.setTitle("Falha de Cadastro");
@@ -222,7 +222,7 @@ public class CadastroController {
             }
         }
 
-        if( (nomeok==true) && (emailok==true) && (usuariook==true) && (senhaok==true) && (cpfok==true) && (dataok==true) )
+        if( (nomeok) && (emailok) && (usuariook) && (senhaok) && (cpfok) && (dataok) )
         {
             novaConta.setNome(nome);
             novaConta.setDatadenascimento(data2);

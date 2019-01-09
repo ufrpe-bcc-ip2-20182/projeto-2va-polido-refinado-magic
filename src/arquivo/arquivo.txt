@@ -1,122 +1,23 @@
 <NOVA-CONTA>
-ajk
-123
-bruno
-121.121.121-12
-Wed Dec 12 00:00:00 BRT 1212
-Wed Jan 09 00:00:00 BRT 2019
-false
-1234.0
-ajk
-<FIM-CONTA>
-<NOVA-CONTA>
-ajk
-123
-bruno
-121.121.121-12
-Wed Dec 12 00:00:00 BRT 1212
-Wed Jan 09 00:00:00 BRT 2019
-false
-1234.0
-ajk
-<FIM-CONTA>
-<NOVA-CONTA>
-ajk
-123
-bruno
-121.121.121-12
-Wed Dec 12 00:00:00 BRT 1212
-Wed Jan 09 00:00:00 BRT 2019
-false
-1234.0
-ajk
-<FIM-CONTA>
-<NOVA-CONTA>
-ajk
-123
-bruno
-121.121.121-12
-Wed Dec 12 00:00:00 BRT 1212
-Wed Jan 09 00:00:00 BRT 2019
-false
-1234.0
-ajk
-<FIM-CONTA>
-<NOVA-CONTA>
-ajk
-123
-bruno
-121.121.121-12
-Wed Dec 12 00:00:00 BRT 1212
-Wed Jan 09 00:00:00 BRT 2019
-false
-1234.0
-ajk
-<FIM-CONTA>
-<NOVA-CONTA>
-ajk
-123
-bruno
-121.121.121-12
-Wed Dec 12 00:00:00 BRT 1212
-Wed Jan 09 00:00:00 BRT 2019
-false
-1234.0
-ajk
-<FIM-CONTA>
-<NOVA-CONTA>
-ajk
-123
-bruno
-121.121.121-12
-Wed Dec 12 00:00:00 BRT 1212
-Wed Jan 09 00:00:00 BRT 2019
-false
-1234.0
-ajk
-<FIM-CONTA>
-<NOVA-CONTA>
-ajk
-123
-bruno
-121.121.121-12
-Wed Dec 12 00:00:00 BRT 1212
-Wed Jan 09 00:00:00 BRT 2019
-false
-1234.0
-ajk
-<FIM-CONTA>
-<NOVA-CONTA>
-ajk
-123
-bruno
-121.121.121-12
-Wed Dec 12 00:00:00 BRT 1212
-Wed Jan 09 00:00:00 BRT 2019
-false
-1234.0
-ajk
-<FIM-CONTA>
-<NOVA-CONTA>
-ajk
-123
-bruno
-121.121.121-12
-Wed Dec 12 00:00:00 BRT 1212
-Wed Jan 09 00:00:00 BRT 2019
-false
-1234.0
-ajk
-<FIM-CONTA>
-<NOVA-CONTA>
-ajk
-123
-ajk
+robertoo
+1234
+adm
 555.555.555-55
 Fri Dec 03 00:00:00 BRST 1999
 Wed Jan 09 00:00:00 BRT 2019
 false
-1234.0
-ajk
+123467.0
+roberto
+<FIM-CONTA>
+<NOVA-CONTA>
+robertoo
+1234
+Roberto
+000.000.000-00
+Wed Dec 18 00:00:00 BRT 2002
+Wed Jan 09 00:00:00 BRT 2019
+false
+123467.0
+roberto
 <FIM-CONTA>
 <FIM-ARQUIVO>
