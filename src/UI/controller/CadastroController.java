@@ -36,6 +36,9 @@ public class CadastroController {
 
     private MainJavaFX sis;
 
+    Conta novaConta = new Conta();
+    SalvarArquivo salvar = new SalvarArquivo();
+
     private Sistema sistema = new Sistema();
     private Arquivo arquivo = new Arquivo();
     private  LerArquivo lerArquivo = new LerArquivo();
@@ -95,7 +98,7 @@ public class CadastroController {
 
         String cpf;
         cpf = CPFField.getText();
-        if(true){
+        if(util.ValidationUtils.cpfcerto(cpf)==true){
             System.out.println(cpf);
         }else{
             Alert alert2 = new Alert(Alert.AlertType.ERROR);
@@ -160,7 +163,6 @@ public class CadastroController {
             }
         }
 
-        Conta novaConta = new Conta();
         novaConta.setNome(nome);
         novaConta.setDatadenascimento(data2);
         novaConta.setDataDeCriacao(data);
@@ -171,7 +173,6 @@ public class CadastroController {
         novaConta.setSaldo(valor);
         this.sistema.addContas(novaConta);
 
-        SalvarArquivo salvar = new SalvarArquivo();
         salvar.salvar(sistema, arquivo.getArquivo());
 
     }

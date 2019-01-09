@@ -37,6 +37,7 @@ public class AddController {
     private LerArquivo lerArquivo = new LerArquivo();
     private ArrayList<Conta> contas = new ArrayList<>();
     private ArrayList<String> logins = new ArrayList<>();
+    Boolean pagamento;
 
     public void initialize(){
         sistema = lerArquivo.ler(arquivo.getArquivo());
@@ -57,8 +58,6 @@ public class AddController {
         Parent root = null;
 
         String nome = nomeField.getText();
-
-        Boolean pagamento;
 
         Double valor = Double.parseDouble(valorPagField.getText());
 
