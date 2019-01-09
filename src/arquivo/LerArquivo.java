@@ -3,14 +3,12 @@ package arquivo;
 import beans.Boleto;
 import beans.Conta;
 import beans.Sistema;
-import util.Getters;
+import util.DateUtils;
 
 import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 public class LerArquivo
 {
@@ -54,12 +52,12 @@ public class LerArquivo
 
                     //data de nascimento
                     aux = leitor.readLine();
-                    data = Getters.converterData(aux);
+                    data = DateUtils.converterData(aux);
                     novaConta.setDatadenascimento(data);
 
                     //data de criação
                     aux = leitor.readLine();
-                    data = Getters.converterData(aux);
+                    data = DateUtils.converterData(aux);
                     novaConta.setDataDeCriacao(data);
                     /*try {
                         data = f.parse(leitor.readLine());

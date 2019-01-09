@@ -9,20 +9,15 @@ import beans.Sistema;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
-import util.Getters;
-import util.Verif;
+import util.DateUtils;
 
-import java.io.IOException;
-import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -82,7 +77,7 @@ public class CadastroController {
 
         try {
             data2 = f.parse(dataDeNascField.getText());
-            data = f.parse(Getters.getDiadeHoje());
+            data = f.parse(DateUtils.getDiadeHoje());
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -122,7 +117,7 @@ public class CadastroController {
             logins.add(contas.get(i).getLogin());
         }
         for(int i = 0; i < logins.size(); i++) {
-            if(logins.get(i).equals(usuario) == true){
+            if(logins.get(i).equals(usuario)){
                 aux = true;
             }
         }

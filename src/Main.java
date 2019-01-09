@@ -1,20 +1,15 @@
 import arquivo.Arquivo;
 import arquivo.LerArquivo;
-import arquivo.SalvarArquivo;
-import beans.Adicionar;
-import beans.Conta;
 import beans.Sistema;
-import controller.Login;
-import util.Verif;
+import util.ValidationUtils;
 
 import java.text.ParseException;
-import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) throws ParseException {
         System.out.println("Executando...");
-        System.out.println(Verif.cpfcerto("000.000.000-00"));
+        System.out.println(ValidationUtils.cpfcerto("000.000.000-00"));
         //para poder fazer o login, precisamos verificar algum tipo de array de contas
         Arquivo arquivo = new Arquivo();
         Sistema sistema = LerArquivo.ler(arquivo.getArquivo());

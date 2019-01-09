@@ -8,7 +8,7 @@ import beans.Sistema;
 import java.util.*;
 import java.lang.String;
 
-public abstract class Verif
+public abstract class ValidationUtils
 {
     //essa classe tem a função de conferir problemas e resolver coisas em geral que podem dar errado
 

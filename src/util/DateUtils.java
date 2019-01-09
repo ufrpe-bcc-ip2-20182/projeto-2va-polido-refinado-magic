@@ -1,14 +1,12 @@
 package util;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.Scanner;
 
-public class Getters
+public class DateUtils
 {
     public static String getDiadeHoje()
     {
@@ -26,7 +24,7 @@ public class Getters
 
     public static Date converterData(String data)
     {
-        String[] partes = Verif.cortarEspacos(data);
+        String[] partes = ValidationUtils.cortarEspacos(data);
         int h = 0;
         switch (partes[1])
         {

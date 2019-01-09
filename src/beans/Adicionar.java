@@ -1,8 +1,7 @@
 package beans;
 
-import util.Getters;
-import util.Verif;
-import arquivo.SalvarArquivo;
+import util.DateUtils;
+import util.ValidationUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -37,21 +36,21 @@ public class Adicionar
         Date data = null;
         try
         {
-            data = dateFormat.parse(Getters.getDiadeHoje());
+            data = dateFormat.parse(DateUtils.getDiadeHoje());
         }
         catch (ParseException e) {
             e.printStackTrace();
         }
         bol.setDataDeCriacao(data);
         System.out.print("Digite a Data de Vencimento (formato 'dd/mm/aaaa'): ");
-        data = Getters.pegarData();
+        data = DateUtils.pegarData();
         bol.setDataDeVencimento(data);
         return bol;
     }
 
     public void removerBoleto(String nomedoboleto, Conta conta)
     {
-        Boleto aux = Verif.existeBoleto(nomedoboleto, conta);
+        Boleto aux = ValidationUtils.existeBoleto(nomedoboleto, conta);
         if (aux != null)
         {
             conta.removeBoleto(aux);
@@ -77,7 +76,7 @@ public class Adicionar
         }
         while (!fluxo);*/
         System.out.print("Digite sua Data de Nascimento (formato 'dd/mm/aaaa'): ");
-        Date data = Getters.pegarData();
+        Date data = DateUtils.pegarData();
         nova.setDatadenascimento(data);
         System.out.println("Digite um login: ");
         //verificação se o login já existe
@@ -101,7 +100,7 @@ public class Adicionar
         Date dataaux = null;
         try
         {
-            dataaux = dateFormat.parse(Getters.getDiadeHoje());
+            dataaux = dateFormat.parse(DateUtils.getDiadeHoje());
         }
         catch (ParseException e)
         {

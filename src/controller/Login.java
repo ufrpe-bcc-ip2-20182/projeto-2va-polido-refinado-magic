@@ -1,6 +1,6 @@
 package controller;
 
-import util.Verif;
+import util.ValidationUtils;
 import beans.Conta;
 import beans.Sistema;
 
@@ -16,7 +16,7 @@ public class Login
         String login = scan.nextLine();
         System.out.print("Digite sua senha:");
         String senha = scan.nextLine();
-        contaatual = Verif.existeConta(login,sistema);
+        contaatual = ValidationUtils.existeConta(login,sistema);
         if(contaatual != null)
         {
             if(senha.equals(contaatual.getSenha()))
