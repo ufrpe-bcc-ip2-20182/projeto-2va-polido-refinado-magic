@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="projeto-ip2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/projeto_ip2_jar</output-path>
+    <root id="archive" name="projeto-ip2.jar">
+      <element id="module-output" name="projeto-ip2" />
+    </root>
+  </artifact>
+</component>
