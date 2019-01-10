@@ -8,14 +8,14 @@ import java.util.Date;
 
 public class Conta extends Pessoa
 {
-    private static String login;
-    private static String senha;
-    private static String id;
-    private static Date dataDeCriacao;
-    private static double saldo;
-    private static boolean status;
-    private static ArrayList<Boleto> boletos;
-    private static String email;
+    private String login;
+    private String senha;
+    private String id;
+    private Date dataDeCriacao;
+    private double saldo;
+    private boolean status;
+    private ArrayList<Boleto> boletos;
+    private String email;
 
     public void setEmail(String email){this.email = email; }
     public String getEmail(){return email;}
