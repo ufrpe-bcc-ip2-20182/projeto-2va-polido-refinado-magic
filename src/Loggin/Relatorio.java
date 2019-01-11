@@ -1,4 +1,6 @@
 package Loggin;
 
-public class Relatorio {
+public class Relatorio
+{
+
 }

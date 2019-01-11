@@ -1,6 +1,6 @@
-package UI.controller;
+package GUI.controller;
 
-import UI.MainJavaFX;
+import GUI.MainJavaFX;
 import arquivo.Arquivo;
 import arquivo.LerArquivo;
 import beans.Conta;
@@ -13,7 +13,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;

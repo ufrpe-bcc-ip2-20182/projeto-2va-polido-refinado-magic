@@ -1,4 +1,4 @@
-package UI.controller;
+package GUI.controller;
 
 public class PendenciasController{
 }

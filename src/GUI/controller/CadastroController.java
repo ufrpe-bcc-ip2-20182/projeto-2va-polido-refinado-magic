@@ -1,6 +1,6 @@
-package UI.controller;
+package GUI.controller;
 
-import UI.MainJavaFX;
+import GUI.MainJavaFX;
 import arquivo.Arquivo;
 import arquivo.LerArquivo;
 import arquivo.SalvarArquivo;

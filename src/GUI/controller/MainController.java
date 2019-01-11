@@ -1,5 +1,5 @@
-package UI.controller;
-import UI.MainJavaFX;
+package GUI.controller;
+import GUI.MainJavaFX;
 import arquivo.Arquivo;
 import arquivo.LerArquivo;
 import beans.*;
@@ -16,8 +16,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 
-import java.awt.image.AreaAveragingScaleFilter;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -76,7 +74,7 @@ public class MainController {
             {
                 if(senhas.contains(passwordField.getText())){
                     stage = (Stage) loginButton.getScene().getWindow();
-                    root = (Parent) FXMLLoader.load(getClass().getResource("/UI/view/Logado.fxml"));
+                    root = (Parent) FXMLLoader.load(getClass().getResource("/GUI/view/Logado.fxml"));
                     loginOk = true;
                 }else{
                     Alert alert = new Alert(Alert.AlertType.ERROR);
