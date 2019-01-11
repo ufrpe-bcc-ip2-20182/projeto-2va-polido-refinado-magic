@@ -89,18 +89,18 @@ public class MudarSenhaController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("ERRO");
                 alert.setHeaderText("Informações inválidas");
-                alert.setContentText("Senhas não correspondem");
+                alert.setContentText("Senha inválida");
                 alert.showAndWait();
             }
         }else{
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("ERRO");
-            alert.setHeaderText("Informações inválidas");
-            alert.setContentText("Senhas não correspondem");
-            alert.showAndWait();
+            Alert alert2 = new Alert(Alert.AlertType.ERROR);
+            alert2.setTitle("ERRO");
+            alert2.setHeaderText("Informações inválidas");
+            alert2.setContentText("Senhas não correspondem");
+            alert2.showAndWait();
         }
 
-        if(senhaOk==true)
+        if(senhaOk)
         {
             contas.get(indice).setSenha(senha);
             SalvarArquivo salvarArquivo = new SalvarArquivo();
