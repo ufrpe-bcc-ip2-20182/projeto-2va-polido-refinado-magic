@@ -1,10 +1,10 @@
 <NOVA-CONTA>
 robertoo
 1234
-adm
-555.555.555-55
-Fri Dec 03 00:00:00 BRST 1999
-Wed Jan 09 00:00:00 BRT 2019
+Roberto
+000.000.000-00
+Wed Dec 18 00:00:00 GFT 2002
+Wed Jan 09 00:00:00 GFT 2019
 false
 123467.0
 roberto
@@ -14,10 +14,21 @@ robertoo
 1234
 Roberto
 000.000.000-00
-Wed Dec 18 00:00:00 BRT 2002
-Wed Jan 09 00:00:00 BRT 2019
+Wed Dec 18 00:00:00 GFT 2002
+Wed Jan 09 00:00:00 GFT 2019
 false
 123467.0
 roberto
+<FIM-CONTA>
+<NOVA-CONTA>
+a
+1
+a
+000.000.000-00
+Sun Oct 01 00:00:00 GFT 2000
+Thu Jan 10 00:00:00 GFT 2019
+false
+0.0
+a
 <FIM-CONTA>
 <FIM-ARQUIVO>
