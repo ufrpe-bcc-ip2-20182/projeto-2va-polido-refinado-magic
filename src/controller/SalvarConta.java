@@ -9,13 +9,12 @@ import java.io.PrintWriter;
 
 public abstract class SalvarConta
 {
-    public static void salvar(Conta conta, File arquivoContas) throws IOException
+    public static void salvar(File arquivoContas, int indice) throws IOException
     {
         FileWriter arquivo = new FileWriter(arquivoContas);
         PrintWriter salvar = new PrintWriter(arquivo);
 
-        salvar.println(conta.getLogin());
-        salvar.println(conta.getSenha());
+        salvar.println(indice);
 
         salvar.close();
     }

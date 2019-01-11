@@ -6,39 +6,23 @@ import java.io.IOException;
 public class ArquivoContas
 {
     File arquivo;
-    private String caminho;
+
+    public File getArquivo()
+    {
+        return arquivo;
+    }
 
     public ArquivoContas()
     {
         File atual = new File(".");
-        this.caminho = null;
+        String caminho = null;
         try {
-            caminho = atual.getCanonicalPath(); //pegando caminho até o contexto atual
-            //caminho apontado por atual: C:\Users\alcid\Desktop\projeto-2va-polido-refinado-magic
-        } catch (IOException e) {
-            e.printStackTrace(); //pritando erros de armazenamento
-        }
-    }
-
-    private void setArquivoContas()
-    {
-        this.arquivo = new File(caminho + "\\src\\main\\java\\br\\ufrpe\\bcc\\ip2\\projeto\\arquivo\\arquivo1.txt");
-        try {
-            arquivo.createNewFile();
+            caminho = atual.getCanonicalPath();
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+        File arquivo = new File("\\Conta.txt");
 
-    public File getArquivoContas()
-    {
-        setArquivoContas();
-        return arquivo;
+        this.arquivo = arquivo;
     }
-
-    public String getCaminho()
-    {
-        return arquivo.getAbsolutePath();
-    }
-
 }

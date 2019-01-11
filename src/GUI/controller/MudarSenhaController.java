@@ -3,8 +3,11 @@ package GUI.controller;
 import GUI.MainJavaFX;
 import arquivo.Arquivo;
 import arquivo.LerArquivo;
+import arquivo.SalvarArquivo;
 import beans.Conta;
 import beans.Sistema;
+import controller.ArquivoContas;
+import controller.LerConta;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -14,6 +17,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class MudarSenhaController {
@@ -27,14 +31,10 @@ public class MudarSenhaController {
     private MainJavaFX sis;
     private int usuario;
 
-
-
-    @FXML TextField userField;
     @FXML PasswordField passAntiga;
     @FXML PasswordField passField;
     @FXML PasswordField pass2Field;
     @FXML Button addButton;
-
 
     public void initialize(){
         sistema = lerArquivo.ler(arquivo.getArquivo());
@@ -56,48 +56,42 @@ public class MudarSenhaController {
 
     public void mudarSenha(){
 
-        String usuario;
-        boolean aux = false;
-        usuario = userField.getText();
-        int aux2 = 0;
+        boolean senhaOk = false;
+        int indice = -1;
 
-        for(int i = 0; i < contas.size(); i++) {
-            senhas.add(contas.get(i).getSenha());
-            logins.add(contas.get(i).getLogin());
+        ArquivoContas arquivoContas = new ArquivoContas();
+        sistema = LerArquivo.ler(arquivo.getArquivo());
+        ArrayList<Conta> contas = sistema.getContas();
+
+
+        try
+        {
+            indice = LerConta.ler(arquivoContas.getArquivo());
         }
-        for(int i = 0; i < logins.size(); i++) {
-            if(logins.get(i).equals(usuario) == true){
-                aux = true;
-                aux2 = i;
-            }
-        }
-        if (aux == true) {
-            System.out.println(usuario);
-        }else{
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("ERRO");
-            alert.setHeaderText("Informações inválidas");
-            alert.setContentText("Usuário não encontrado");
-            alert.showAndWait();
+        catch (IOException e)
+        {
+            e.printStackTrace();
         }
 
-        String senhaUser;
-        senhaUser = passAntiga.getText();
-        if(senhaUser.equals(senhas.get(aux2)) == true){
-            System.out.println(senhaUser);
-        }else{
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("ERRO");
-            alert.setHeaderText("Informações inválidas");
-            alert.setContentText("Senha incorreta");
-            alert.showAndWait();
-        }
+        Conta conta = contas.get(indice);
 
-        String senha, senha2;
+        String senha, senha2, senhaAntes;
+        senhaAntes = passAntiga.getText();
         senha = passField.getText();
         senha2 = pass2Field.getText();
-        if(senha.equals(senha2) == true){
-            System.out.println(senha);
+        if( (senhaAntes.equals(conta.getSenha())) && (senha.equals(senha2) && (!senha.equals(conta.getSenha())) ) ){
+
+            if( (!senha.equals("<NOVA-CONTA>")) && (!senha.equals("NOVO-BOLETO>")) && (!senha.equals("<FIM-BOLETO>")) && (!senha.equals("<FIM-CONTA>")) && (!senha.equals("<FIM-ARQUIVO>")) )
+            {
+               senhaOk = true;
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("ERRO");
+                alert.setHeaderText("Informações inválidas");
+                alert.setContentText("Senhas não correspondem");
+                alert.showAndWait();
+            }
         }else{
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("ERRO");
@@ -106,9 +100,12 @@ public class MudarSenhaController {
             alert.showAndWait();
         }
 
-    }
-    public void setUsuario(int indice){
-        this.usuario = indice;
+        if(senhaOk==true)
+        {
+            contas.get(indice).setSenha(senha);
+            SalvarArquivo salvarArquivo = new SalvarArquivo();
+            salvarArquivo.salvar(sistema, arquivo.getArquivo());
+        }
     }
 
     @FXML
