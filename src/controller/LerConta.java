@@ -11,9 +11,10 @@ public abstract class LerConta
     {
         FileReader arquivo = new FileReader(arquivoContas);
         BufferedReader ler = new BufferedReader(arquivo);
+        int indice = Integer.parseInt(ler.readLine());
 
         arquivo.close();
 
-        return Integer.parseInt(ler.readLine());
+        return indice;
     }
 }

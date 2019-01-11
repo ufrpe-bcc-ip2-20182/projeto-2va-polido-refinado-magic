@@ -21,7 +21,7 @@ public class Arquivo
         } catch (IOException e) {
             e.printStackTrace();
         }
-        File arquivo = new File("arquivo/arquivo.txt");
+        File arquivo = new File(caminho+"/arquivo/arquivo.txt");
 
         this.arquivo = arquivo;
     }
