@@ -1,0 +1,23 @@
+<NOVA-CONTA>
+robertoo
+1234
+adm
+555.555.555-55
+Fri Dec 03 00:00:00 BRST 1999
+Wed Jan 09 00:00:00 BRT 2019
+false
+123467.0
+roberto
+<FIM-CONTA>
+<NOVA-CONTA>
+robertoo
+1234
+Roberto
+000.000.000-00
+Wed Dec 18 00:00:00 BRT 2002
+Wed Jan 09 00:00:00 BRT 2019
+false
+123467.0
+roberto
+<FIM-CONTA>
+<FIM-ARQUIVO>

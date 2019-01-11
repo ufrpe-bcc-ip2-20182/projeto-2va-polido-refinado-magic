@@ -8,7 +8,6 @@ import util.DateUtils;
 import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 
 public class LerArquivo
@@ -17,6 +16,7 @@ public class LerArquivo
     public static Sistema ler(File arquivo)
     {
         FileReader arquivoleitura = null;
+
         try {
           arquivoleitura = new FileReader(arquivo);
         }

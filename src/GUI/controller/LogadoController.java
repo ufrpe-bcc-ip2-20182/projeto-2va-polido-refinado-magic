@@ -1,6 +1,6 @@
-package UI.controller;
+package GUI.controller;
 
-import UI.MainJavaFX;
+import GUI.MainJavaFX;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 

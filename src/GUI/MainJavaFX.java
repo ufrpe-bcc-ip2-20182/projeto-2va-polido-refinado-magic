@@ -1,4 +1,4 @@
-package UI;
+package GUI;
 
 import arquivo.Arquivo;
 import javafx.application.Application;
@@ -34,19 +34,19 @@ public class MainJavaFX extends Application {
         Arquivo arquivo = new Arquivo();
 
 
-        Parent fxmlLogin = FXMLLoader.load(getClass().getResource("/UI/view/Login.fxml"));
+        Parent fxmlLogin = FXMLLoader.load(getClass().getResource("view/Login.fxml"));
         sceneLogin = new Scene(fxmlLogin, 600,400);
 
-        Parent fxmlCadastro = FXMLLoader.load(getClass().getResource("/UI/view/Cadastrar.fxml"));
+        Parent fxmlCadastro = FXMLLoader.load(getClass().getResource("view/Cadastrar.fxml"));
         sceneCadastro = new Scene(fxmlCadastro, 600, 400);
 
-        Parent fxmlLogado = FXMLLoader.load(getClass().getResource("/UI/view/Logado.fxml"));
+        Parent fxmlLogado = FXMLLoader.load(getClass().getResource("view/Logado.fxml"));
         sceneLogado = new Scene(fxmlLogado, 600, 400);
 
-        Parent fxmlAdd = FXMLLoader.load(getClass().getResource("/UI/view/Add.fxml"));
+        Parent fxmlAdd = FXMLLoader.load(getClass().getResource("view/Add.fxml"));
         sceneAdd = new Scene(fxmlAdd, 600, 400);
 
-        Parent fxmlMudarSenha = FXMLLoader.load(getClass().getResource("/UI/view/MudarSenha.fxml"));
+        Parent fxmlMudarSenha = FXMLLoader.load(getClass().getResource("view/MudarSenha.fxml"));
         sceneMudarSenha = new Scene(fxmlMudarSenha, 600, 400);
 
         primaryStage.setScene(sceneLogin);
