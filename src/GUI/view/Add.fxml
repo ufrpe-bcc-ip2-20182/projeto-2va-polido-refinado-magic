@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.controller.AddController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.controller.AddController">
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -21,7 +21,7 @@
             <CheckBox fx:id="aPagarBox" layoutX="319.0" layoutY="270.0" mnemonicParsing="false" text="A Pagar" />
             <CheckBox fx:id="pagoBox" layoutX="243.0" layoutY="270.0" mnemonicParsing="false" text="Pago" />
             <Button fx:id="addButton" layoutX="169.0" layoutY="325.0" mnemonicParsing="false" text="Adicionar" />
-            <Button layoutX="391.0" layoutY="325.0" mnemonicParsing="false" onAction="#btVoltar" text="Cancelar" />
+            <Button layoutX="391.0" layoutY="325.0" mnemonicParsing="false" onAction="#btVoltar" text="Voltar" />
          </children>
       </Pane>
    </center>
