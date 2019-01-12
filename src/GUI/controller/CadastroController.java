@@ -232,11 +232,21 @@ public class CadastroController {
             novaConta.setSaldo(valor);
             this.sistema.addContas(novaConta);
 
-            salvar.salvar(sistema, arquivo.getArquivo());
+            nomeField.clear();
+            passField.clear();
+            passOkField.clear();
+            dataDeNascField.clear();
+            CPFField.clear();
+            emailField.clear();
+            userField.clear();
+            saldoField.clear();
 
+            salvar.salvar(sistema, arquivo.getArquivo());
+            
             Alert alert5 = new Alert(Alert.AlertType.CONFIRMATION);
             alert5.setTitle("Aviso");
             alert5.setHeaderText("Cadastro Realizado com Sucesso");
+
             alert5.showAndWait();
         }
 
