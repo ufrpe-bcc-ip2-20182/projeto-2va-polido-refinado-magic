@@ -14,7 +14,7 @@ public class Conta extends Pessoa
     private Date dataDeCriacao;
     private double saldo;
     private boolean status;
-    private ArrayList<Boleto> boletos;
+    private ArrayList<Boleto> boletos = new ArrayList<>();
     private String email;
 
     public void setEmail(String email){this.email = email; }
@@ -81,7 +81,7 @@ public class Conta extends Pessoa
         this.boletos.add(boleto);
     }
 
-    public void setBoletos()
+    public void limparBoletos()
     {
         this.boletos.clear();
     }

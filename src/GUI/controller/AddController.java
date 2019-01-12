@@ -156,7 +156,7 @@ public class AddController {
             novoBoleto.setDataDeCriacao(data);
             novoBoleto.setDataDeVencimento(data2);
             double pagar = sistema.getContas().get(indice).getSaldo();
-            if((pagar-valor)>0)
+            if(pagar-valor >= 0)
             {
                 sistema.getContas().get(indice).setSaldo(pagar-valor);
             }
@@ -169,7 +169,29 @@ public class AddController {
                 alert1.showAndWait();
             }
             sistema.getContas().get(indice).setBoletos(novoBoleto);
+            /*
+            * @FXML private TextField nomeField;
+    @FXML private TextField dataDoPagamentoField;
+    @FXML private TextField valorPagField;
+    @FXML private CheckBox pagoBox;
+    @FXML private CheckBox aPagarBox;*/
+            nomeField.clear();
+            dataDoPagamentoField.clear();
+            valorPagField.clear();
+            if(pagoBox.isSelected())
+            {
+                pagoBox.fire();
+            }
+            else if(aPagarBox.isSelected())
+            {
+                aPagarBox.fire();
+            }
+
+            Alert alert5 = new Alert(Alert.AlertType.CONFIRMATION);
+            alert5.setTitle("Aviso");
+            alert5.setHeaderText("Boleto adicionado com sucesso!");
             SalvarArquivo salvarArquivo = new SalvarArquivo();
+
             salvarArquivo.salvar(sistema, arquivo.getArquivo());
         }
     }

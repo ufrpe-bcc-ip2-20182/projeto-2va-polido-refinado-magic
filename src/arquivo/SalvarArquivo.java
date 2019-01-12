@@ -40,8 +40,7 @@ public class SalvarArquivo
             for(int i=0; i<contas.size(); i++)
             {
                 escrever.println("<NOVA-CONTA>");
-                Conta contaAux = new Conta();
-                contaAux = contas.get(i);
+                Conta contaAux = contas.get(i);
                 escrever.println(contaAux.getLogin());
                 escrever.println(contaAux.getSenha());
                 escrever.println(contaAux.getNome());
@@ -57,9 +56,8 @@ public class SalvarArquivo
                 {
                     for (int j=0;j<boletos.size();j++)
                     {
-                        escrever.println("NOVO-BOLETO>");
-                        Boleto boletoAux = new Boleto();
-                        boletoAux = boletos.get(j);
+                        escrever.println("<NOVO-BOLETO>");
+                        Boleto boletoAux = boletos.get(j);
                         escrever.println(boletoAux.getNomeDoBoleto());
                         escrever.println(boletoAux.getValor());
                         escrever.println(boletoAux.getDataDeCriacao());

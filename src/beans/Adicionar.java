@@ -20,7 +20,7 @@ public class Adicionar
 
     public void adicionarBoleto(Conta con)
     {
-        con.setBoletos();
+        con.limparBoletos();
     }
 
     public Boleto inserirBoleto()

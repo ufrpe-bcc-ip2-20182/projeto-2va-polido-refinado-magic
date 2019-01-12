@@ -8,7 +8,6 @@ import util.DateUtils;
 import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 
 public class LerArquivo
@@ -102,7 +101,7 @@ public class LerArquivo
                     sistema.addContas(novaConta);
                     if(novaConta.getBoletos() != null)
                     {
-                        novaConta.setBoletos();//o set de conta para boletos faz que todos os boletos inseridos sejam deletados
+                        novaConta.limparBoletos();//o set de conta para boletos faz que todos os boletos inseridos sejam deletados
                     }
                 }
                 else
