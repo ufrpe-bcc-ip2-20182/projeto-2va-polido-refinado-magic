@@ -127,7 +127,7 @@ public class AddController {
             alert2.showAndWait();
         }
 
-        SimpleDateFormat f= new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
 
         java.util.Date data2 = null;
         java.util.Date data = null;
@@ -136,7 +136,8 @@ public class AddController {
         try {
             data2 = f.parse(dataDoPagamentoField.getText());
             data = f.parse(DateUtils.getDiadeHoje());
-        } catch (ParseException e) {
+        } catch (ParseException e)
+        {
             dataFormato = false;
             Alert alert1 = new Alert(Alert.AlertType.ERROR);
             alert1.setTitle("Falha de Cadastro");
@@ -144,7 +145,6 @@ public class AddController {
             alert1.setContentText("Data contém formatação inválida");
             alert1.showAndWait();
         }
-
 
         if( (nomeOk) && (valorOk) && (pagoBoxOk) && (dataFormato) )
         {

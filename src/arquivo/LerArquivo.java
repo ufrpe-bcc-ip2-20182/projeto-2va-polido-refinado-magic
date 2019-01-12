@@ -72,19 +72,14 @@ public class LerArquivo
                     novoBoleto.setNomeDoBoleto(leitor.readLine());
                     novoBoleto.setValor(Double.parseDouble(leitor.readLine()));
 
-                    try {
-                        data = f.parse(leitor.readLine());
-                    } catch (ParseException e) {
-                        e.printStackTrace();
-                    }
+
+                        //data = f.parse(leitor.readLine());
+                        data = DateUtils.converterData(leitor.readLine());
+
 
                     novoBoleto.setDataDeCriacao(data);
 
-                    try {
-                        data = f.parse(leitor.readLine());
-                    } catch (ParseException e) {
-                        e.printStackTrace();
-                    }
+                    data = DateUtils.converterData(leitor.readLine());
 
                     novoBoleto.setDataDeVencimento(data);
                     novoBoleto.setValor(Double.parseDouble(leitor.readLine()));
