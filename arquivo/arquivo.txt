@@ -1,12 +1,12 @@
 <NOVA-CONTA>
-all
+a
 123
-asduhasuhdasuhsudhasu
-222.222.222-22
-Sat Nov 11 00:00:00 GFT 1111
-Fri Jan 11 00:00:00 GFT 2019
+alcides
+111.111.555-88
+Thu Feb 10 00:00:00 GFT 2000
+Sat Jan 12 00:00:00 GFT 2019
 false
 5000.0
-50
+a
 <FIM-CONTA>
 <FIM-ARQUIVO>

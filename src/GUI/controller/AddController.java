@@ -169,12 +169,7 @@ public class AddController {
                 alert1.showAndWait();
             }
             sistema.getContas().get(indice).setBoletos(novoBoleto);
-            /*
-            * @FXML private TextField nomeField;
-    @FXML private TextField dataDoPagamentoField;
-    @FXML private TextField valorPagField;
-    @FXML private CheckBox pagoBox;
-    @FXML private CheckBox aPagarBox;*/
+
             nomeField.clear();
             dataDoPagamentoField.clear();
             valorPagField.clear();

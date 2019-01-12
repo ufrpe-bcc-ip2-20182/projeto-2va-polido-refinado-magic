@@ -78,6 +78,12 @@ public abstract class ValidationUtils
         return null;
     }
 
+    private static String removerUmaParte(String vetor)
+    {
+        String [] aux = cortarEspacos(vetor);
+        return aux[1];
+    }
+
     public static Boleto existeBoleto(String nome, Conta con)
     {
         ArrayList<Boleto> boletos = con.getBoletos();

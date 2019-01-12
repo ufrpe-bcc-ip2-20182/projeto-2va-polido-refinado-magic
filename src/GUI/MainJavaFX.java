@@ -31,8 +31,8 @@ public class MainJavaFX extends Application {
         stage = primaryStage;
         primaryStage.setTitle("PROGASTOS");
 
-        Arquivo arquivo = new Arquivo();
 
+        Arquivo arquivo = new Arquivo();
 
         Parent fxmlLogin = FXMLLoader.load(getClass().getResource("view/Login.fxml"));
         sceneLogin = new Scene(fxmlLogin, 600,400);
@@ -54,6 +54,7 @@ public class MainJavaFX extends Application {
     }
 
     public static void changeScreen(String scr){
+
         switch(scr){
             case "login":
                 stage.setScene(sceneLogin);

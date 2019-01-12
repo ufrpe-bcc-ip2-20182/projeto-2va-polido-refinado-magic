@@ -242,11 +242,11 @@ public class CadastroController {
             saldoField.clear();
 
             salvar.salvar(sistema, arquivo.getArquivo());
-            
+
             Alert alert5 = new Alert(Alert.AlertType.CONFIRMATION);
             alert5.setTitle("Aviso");
             alert5.setHeaderText("Cadastro Realizado com Sucesso");
-
+            alert5.getOnCloseRequest();
             alert5.showAndWait();
         }
 

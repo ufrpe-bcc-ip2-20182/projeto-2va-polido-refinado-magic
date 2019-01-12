@@ -105,6 +105,13 @@ public class MudarSenhaController {
             sistema.getContas().get(indice).setSenha(senha);
             SalvarArquivo salvarArquivo = new SalvarArquivo();
             salvarArquivo.salvar(sistema, arquivo.getArquivo());
+            passAntiga.clear();
+            passField.clear();
+            pass2Field.clear();
+            Alert alert4 = new Alert(Alert.AlertType.INFORMATION);
+            alert4.setTitle("Confirmação.");
+            alert4.setHeaderText("Senha alterada com sucesso");
+            alert4.showAndWait();
         }
     }
 
