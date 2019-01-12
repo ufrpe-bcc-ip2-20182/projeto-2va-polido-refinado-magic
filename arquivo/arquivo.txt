@@ -1,12 +1,34 @@
 <NOVA-CONTA>
-victor
-777
-victor
-090.090.090-09
-Sat Dec 05 00:00:00 BRST 1998
-Thu Jan 10 00:00:00 BRST 2019
+alices
+123
+Alices
+000.000.000-00
+Sat Nov 11 00:00:00 BRST 2000
+Sat Jan 12 00:00:00 BRST 2019
 false
-54655.0
-victor
+1.1111111E7
+alicescunha@gmail.com
+<FIM-CONTA>
+<NOVA-CONTA>
+alices
+123
+Alices
+000.000.000-00
+Sat Nov 11 00:00:00 BRST 2000
+Sat Jan 12 00:00:00 BRST 2019
+false
+1.1111111E7
+alicescunha@gmail.com
+<FIM-CONTA>
+<NOVA-CONTA>
+nanda
+123
+Nanda
+000.000.000-00
+Sat Nov 11 00:00:00 BRST 2000
+Sat Jan 12 00:00:00 BRST 2019
+false
+1.0E8
+nandadriftking@gmail.com
 <FIM-CONTA>
 <FIM-ARQUIVO>

@@ -46,7 +46,7 @@ public class AddController {
     private boolean pagamento;
 
     public void initialize(){
-        sistema = lerArquivo.ler(arquivo.getArquivo());
+
         this.sis = MainJavaFX.getInstance();
 
         this.addButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -64,6 +64,7 @@ public class AddController {
 
         int indice = -1;
 
+        sistema = lerArquivo.ler(arquivo.getArquivo());
         ArquivoContas arquivoContas = new ArquivoContas();
 
         try

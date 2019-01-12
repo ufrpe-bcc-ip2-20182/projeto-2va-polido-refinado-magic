@@ -46,9 +46,7 @@ public class CadastroController {
     private ArrayList<String> logins = new ArrayList<>();
 
     public void initialize(){
-        sistema = lerArquivo.ler(arquivo.getArquivo());
         this.sis = MainJavaFX.getInstance();
-        contas = sistema.getContas();
 
         this.saldoField.setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.ENTER) {
@@ -68,6 +66,9 @@ public class CadastroController {
         Stage stage = null;
         Parent root = null;
         boolean cadastroOk = false;
+
+        sistema = lerArquivo.ler(arquivo.getArquivo());
+        contas = sistema.getContas();
 
         String nome;
         boolean nomeok = false;

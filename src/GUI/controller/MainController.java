@@ -71,6 +71,9 @@ public class MainController {
         String senha;
         int indice = -1;
 
+        sistema = lerArquivo.ler(arquivo.getArquivo());
+        contas = sistema.getContas();
+
         try{
             for (int i = 0; i < contas.size(); i++){
                 logins.add(contas.get(i).getLogin());
