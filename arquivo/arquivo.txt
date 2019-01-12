@@ -1,0 +1,12 @@
+<NOVA-CONTA>
+victor
+7777
+victor
+090.090.090-09
+Sat Dec 05 00:00:00 BRST 1998
+Thu Jan 10 00:00:00 BRST 2019
+false
+54678.0
+victor
+<FIM-CONTA>
+<FIM-ARQUIVO>

@@ -102,7 +102,7 @@ public class MudarSenhaController {
 
         if(senhaOk)
         {
-            contas.get(indice).setSenha(senha);
+            sistema.getContas().get(indice).setSenha(senha);
             SalvarArquivo salvarArquivo = new SalvarArquivo();
             salvarArquivo.salvar(sistema, arquivo.getArquivo());
         }
