@@ -17,6 +17,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 import util.DateUtils;
 
@@ -42,14 +43,11 @@ public class AddController {
     private Sistema sistema = new Sistema();
     private Arquivo arquivo = new Arquivo();
     private LerArquivo lerArquivo = new LerArquivo();
-    private ArrayList<Conta> contas = new ArrayList<>();
-    private ArrayList<String> logins = new ArrayList<>();
     private boolean pagamento;
 
     public void initialize(){
         sistema = lerArquivo.ler(arquivo.getArquivo());
         this.sis = MainJavaFX.getInstance();
-        contas = sistema.getContas();
 
         this.addButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -67,7 +65,6 @@ public class AddController {
         int indice = -1;
 
         ArquivoContas arquivoContas = new ArquivoContas();
-        sistema = LerArquivo.ler(arquivo.getArquivo());
 
         try
         {
@@ -131,8 +128,9 @@ public class AddController {
         }
 
         SimpleDateFormat f= new SimpleDateFormat("dd/MM/yyyy");
-        java.util.Date data = null;
+
         java.util.Date data2 = null;
+        java.util.Date data = null;
         boolean dataFormato = true;
 
         try {
@@ -147,6 +145,7 @@ public class AddController {
             alert1.showAndWait();
         }
 
+
         if( (nomeOk) && (valorOk) && (pagoBoxOk) && (dataFormato) )
         {
             Boleto novoBoleto = new Boleto();
@@ -156,7 +155,6 @@ public class AddController {
             novoBoleto.setPagamento(pagamento);
             novoBoleto.setDataDeCriacao(data);
             novoBoleto.setDataDeVencimento(data2);
-
             double pagar = sistema.getContas().get(indice).getSaldo();
             if((pagar-valor)>0)
             {
