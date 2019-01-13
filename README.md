@@ -15,7 +15,10 @@ Um programa que auxilia o usuário com seus gastos (sejam mensais ou semanais), 
 - javaFX
 
 ### Funcionalidades
-[insira uma descrição básica das funcionalidades do sistema]
+- Login
+- Cadastro
+- Mudar Senha
+- Adicionar Pagamento
 
 ### Diagrama de Classes
 Veja o diagrama [aqui](https://drive.google.com/open?id=1nYKXyGROEK1R7LwuO4a2d_JQd2xsMaus)
