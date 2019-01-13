@@ -1,1 +1,12 @@
+<NOVA-CONTA>
+victor
+123
+victor
+000.000.000-00
+Sat Nov 11 00:00:00 BRT 1111
+Sun Jan 13 00:00:00 BRST 2019
+false
+111111.0
+saadadadasdd
+<FIM-CONTA>
 <FIM-ARQUIVO>
