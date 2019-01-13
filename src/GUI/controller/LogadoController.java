@@ -57,5 +57,7 @@ public class LogadoController {
 
         SalvarArquivo salvarArquivo = new SalvarArquivo();
         salvarArquivo.salvar(sistema, arquivo.getArquivo());
+
+        MainJavaFX.changeScreen("login");
     }
 }
