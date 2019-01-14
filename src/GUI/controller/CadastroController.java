@@ -16,7 +16,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
-import util.DateUtils;
+import util.DateandGenerateUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -94,7 +94,7 @@ public class CadastroController {
 
         try {
             data2 = f.parse(dataDeNascField.getText());
-            data = f.parse(DateUtils.getDiadeHoje());
+            data = f.parse(DateandGenerateUtils.getDiadeHoje());
         } catch (ParseException e) {
             dataFormato = false;
             Alert alert1 = new Alert(Alert.AlertType.ERROR);

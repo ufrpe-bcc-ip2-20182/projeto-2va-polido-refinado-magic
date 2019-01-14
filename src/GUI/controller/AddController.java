@@ -5,7 +5,6 @@ import arquivo.Arquivo;
 import arquivo.LerArquivo;
 import arquivo.SalvarArquivo;
 import beans.Boleto;
-import beans.Conta;
 import beans.Sistema;
 import controller.ArquivoContas;
 import controller.LerConta;
@@ -17,14 +16,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
-import util.DateUtils;
+import util.DateandGenerateUtils;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 
 public class AddController {
     @FXML protected void btVoltar(ActionEvent e){
@@ -136,7 +133,7 @@ public class AddController {
 
         try {
             data2 = f.parse(dataDoPagamentoField.getText());
-            data = f.parse(DateUtils.getDiadeHoje());
+            data = f.parse(DateandGenerateUtils.getDiadeHoje());
         } catch (ParseException e)
         {
             dataFormato = false;
@@ -157,7 +154,7 @@ public class AddController {
             novoBoleto.setDataDeCriacao(data);
             novoBoleto.setDataDeVencimento(data2);
             double pagar = sistema.getContas().get(indice).getSaldo();
-            if(pagar-valor >= 0)
+            if(pagar-valor >= 0 && pagoBox.isSelected())
             {
                 sistema.getContas().get(indice).setSaldo(pagar-valor);
             }
