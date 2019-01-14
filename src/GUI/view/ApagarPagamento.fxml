@@ -9,9 +9,9 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.controller.ApagarPagamentoController">
    <children>
       <Text layoutX="76.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome do Pagamento:" />
-      <CheckBox layoutX="76.0" layoutY="166.0" mnemonicParsing="false" text="Apagar todos o pagamentos" />
-      <CheckBox layoutX="76.0" layoutY="207.0" mnemonicParsing="false" text="Apagar somente o último pagamento" />
-      <TextField layoutX="217.0" layoutY="88.0" prefHeight="27.0" prefWidth="269.0" />
+      <CheckBox fx:id="apagarTodosCB" layoutX="76.0" layoutY="166.0" mnemonicParsing="false" text="Apagar todos o pagamentos" />
+      <CheckBox fx:id="apagarUmCB" layoutX="76.0" layoutY="207.0" mnemonicParsing="false" text="Apagar somente o último pagamento" />
+      <TextField fx:id="nomeDoPagTF" layoutX="217.0" layoutY="88.0" prefHeight="27.0" prefWidth="269.0" />
       <Button fx:id="apagarPagButton" layoutX="155.0" layoutY="284.0" mnemonicParsing="false" text="Apagar" />
       <Button layoutX="352.0" layoutY="284.0" mnemonicParsing="false" onAction="#voltarButton" text="Voltar" />
    </children>
