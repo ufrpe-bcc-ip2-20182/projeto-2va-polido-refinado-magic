@@ -35,7 +35,6 @@ public class ApagarPagamentoController {
     @FXML private TextField nomeDoPagTF;
     @FXML private CheckBox apagarTodosCB;
     @FXML private CheckBox apagarUmCB;
-    @FXML private Button voltarButton;
 
     @FXML
     protected void voltarButton(ActionEvent e){

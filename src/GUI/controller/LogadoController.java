@@ -39,6 +39,10 @@ public class LogadoController {
         MainJavaFX.changeScreen("mudarSenha");
     }
 
+    @FXML
+    protected void btRemoverPag(ActionEvent e){
+        MainJavaFX.changeScreen("apagarPagamento");
+    }
 
     @FXML
     protected void btExcluirConta(ActionEvent e)

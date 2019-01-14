@@ -13,6 +13,6 @@
       <CheckBox layoutX="76.0" layoutY="207.0" mnemonicParsing="false" text="Apagar somente o último pagamento" />
       <TextField layoutX="217.0" layoutY="88.0" prefHeight="27.0" prefWidth="269.0" />
       <Button fx:id="apagarPagButton" layoutX="155.0" layoutY="284.0" mnemonicParsing="false" text="Apagar" />
-      <Button fx:id="voltarButton" layoutX="352.0" layoutY="284.0" mnemonicParsing="false" text="Voltar" />
+      <Button layoutX="352.0" layoutY="284.0" mnemonicParsing="false" onAction="#voltarButton" text="Voltar" />
    </children>
 </Pane>
