@@ -71,7 +71,7 @@ public class MainController {
         //boolean loginOk = false;
         int indice = -1;
 
-        sistema = lerArquivo.ler(arquivo.getArquivo());
+        sistema = LerArquivo.ler(arquivo.getArquivo());
         contas = sistema.getContas();
         String login = userField.getText();
         String senha = passwordField.getText();

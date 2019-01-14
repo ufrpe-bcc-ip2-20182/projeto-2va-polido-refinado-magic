@@ -60,7 +60,6 @@ public class ApagarPagamentoController {
         Arquivo arquivo = new Arquivo();
         sistema = LerArquivo.ler(arquivo.getArquivo());
         ArquivoContas arquivoContas = new ArquivoContas();
-
         try
         {
             indice = LerConta.ler(arquivoContas.getArquivo());

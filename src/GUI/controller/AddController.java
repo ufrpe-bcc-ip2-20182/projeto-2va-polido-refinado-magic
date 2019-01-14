@@ -61,7 +61,7 @@ public class AddController {
 
         int indice = -1;
 
-        sistema = lerArquivo.ler(arquivo.getArquivo());
+        sistema = LerArquivo.ler(arquivo.getArquivo());
         ArquivoContas arquivoContas = new ArquivoContas();
 
         try

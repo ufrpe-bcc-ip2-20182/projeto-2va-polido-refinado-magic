@@ -63,6 +63,7 @@ public class MudarSenhaController {
         ArrayList<Conta> contas = sistema.getContas();
 
 
+
         try
         {
             indice = LerConta.ler(arquivoContas.getArquivo());
@@ -71,6 +72,8 @@ public class MudarSenhaController {
         {
             e.printStackTrace();
         }
+
+
 
         ArrayList<Boleto> boletos = sistema.getContas().get(indice).getBoletos();
         Conta conta = contas.get(indice);
