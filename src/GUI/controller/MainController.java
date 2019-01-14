@@ -73,6 +73,7 @@ public class MainController {
             for (int i = 0; i < contas.size(); i++){
                 logins.add(contas.get(i).getLogin());
                 senhas.add(contas.get(i).getSenha());
+                System.out.println(logins.get(i)+" "+senhas.get(i));
             }
             login = userField.getText();
             if(logins.contains(login))

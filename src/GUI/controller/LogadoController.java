@@ -64,4 +64,10 @@ public class LogadoController {
 
         MainJavaFX.changeScreen("login");
     }
+
+    @FXML
+    protected void btApagarPagamento(ActionEvent e)
+    {
+        MainJavaFX.changeScreen("apagarPagamento");
+    }
 }

@@ -25,6 +25,7 @@ public class MainJavaFX extends Application {
     private static Scene sceneLogado;
     private static Scene sceneAdd;
     private static Scene sceneMudarSenha;
+    private static Scene sceneApagarPagamento;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -49,6 +50,9 @@ public class MainJavaFX extends Application {
         Parent fxmlMudarSenha = FXMLLoader.load(getClass().getResource("view/MudarSenha.fxml"));
         sceneMudarSenha = new Scene(fxmlMudarSenha, 600, 400);
 
+        Parent fxmlApagarPagamento = FXMLLoader.load(getClass().getResource("view/ApagarPagamento.fxml"));
+        sceneApagarPagamento = new Scene(fxmlApagarPagamento, 600, 400);
+
         primaryStage.setScene(sceneLogin);
         primaryStage.show();
     }
@@ -70,6 +74,9 @@ public class MainJavaFX extends Application {
                 break;
             case "mudarSenha":
                 stage.setScene(sceneMudarSenha);
+                break;
+            case "apagarPagamento":
+                stage.setScene(sceneApagarPagamento);
         }
     }
 
