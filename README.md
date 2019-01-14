@@ -26,7 +26,7 @@ Um programa que auxilia o usuário com seus gastos (sejam mensais ou semanais), 
 Veja o diagrama [aqui](https://drive.google.com/open?id=1nYKXyGROEK1R7LwuO4a2d_JQd2xsMaus)
 
 ### Implantação
-[orientações gerais de como executar o sistema (arquivos de configuração, argumentos de linha de comando, etc.)]
+Para executar o jar, precisa ter uma copia da pasta arquivos (que possui arquivo.txt, Conta.txt ...) no diretorio do usuario de seu computador. No Prompt de comando escreva: java -jar . Arraste e solte o executavel. Aperte enter. 
 
 ### Algumas telas que foram implementadas
 
