@@ -105,12 +105,7 @@ public class MainController {
                 userField.clear();
                 passwordField.clear();
 
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                String tituloAtual = stage.getTitle();
-                stage.setTitle(tituloAtual +" - "+ (""+user.charAt(0)).toUpperCase() + user.substring(1, user.length()));
-                stage.setResizable(true);
-                sis.changeStage(stage);
+                MainJavaFX.changeScreen("logado");
             }
         }catch(IOException e){
             e.printStackTrace();
