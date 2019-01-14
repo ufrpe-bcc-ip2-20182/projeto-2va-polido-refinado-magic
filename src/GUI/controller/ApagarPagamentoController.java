@@ -37,6 +37,12 @@ public class ApagarPagamentoController {
     @FXML private CheckBox apagarUmCB;
     @FXML private Button voltarButton;
 
+    @FXML
+    protected void voltarButton(ActionEvent e){
+        MainJavaFX.changeScreen("logado");
+    }
+
+
     public void initialize(){
 
         this.apagarPagButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -111,6 +117,7 @@ public class ApagarPagamentoController {
         salvarArquivo.salvar(sistema, arquivo.getArquivo());
 
         MainJavaFX.changeScreen("logado");
+
 
     }
 }
