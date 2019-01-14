@@ -57,7 +57,7 @@ public class MainJavaFX extends Application {
         primaryStage.show();
     }
 
-    public static void changeScreen(String scr){
+        public static void changeScreen(String scr){
 
         switch(scr){
             case "login":
@@ -80,7 +80,7 @@ public class MainJavaFX extends Application {
         }
     }
 
-    public void changeStage(Stage stage){
+        public void changeStage(Stage stage){
         this.primaryStage = stage;
     }
 

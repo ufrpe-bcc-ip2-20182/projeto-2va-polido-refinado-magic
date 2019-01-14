@@ -41,7 +41,7 @@ public class CadastroController {
 
     private Sistema sistema = new Sistema();
     private Arquivo arquivo = new Arquivo();
-    private  LerArquivo lerArquivo = new LerArquivo();
+    private LerArquivo lerArquivo = new LerArquivo();
     private ArrayList<Conta> contas = new ArrayList<>();
     private ArrayList<String> logins = new ArrayList<>();
 

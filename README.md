@@ -24,9 +24,11 @@ Um programa que auxilia o usuário com seus gastos (sejam mensais ou semanais), 
 
 ### Diagrama de Classes
 Veja o diagrama [aqui](https://drive.google.com/open?id=1nYKXyGROEK1R7LwuO4a2d_JQd2xsMaus)
+[Opção 2](https://drive.google.com/open?id=1wIP0frvMp9PCvuDHprteSQIlWs_Gsh1d)
 
 ### Implantação
-Para executar o jar, precisa ter uma copia da pasta arquivos (que possui arquivo.txt, Conta.txt ...) no diretorio do usuario de seu computador. No Prompt de comando escreva: java -jar . Arraste e solte o executavel. Aperte enter. 
+Para executar o jar, é necessário ter uma copia da pasta arquivos (que possui arquivo.txt, Conta.txt ...) no diretorio do usuario de seu computador. No Prompt de comando escreva: java -jar . Arraste e solte o executavel. Aperte enter.
+OBS: Em alguns casos, é necessário ter um copia da pasta src inteira (encontrada no intelliJ) no diretorio do usuario. Exemplo de diretorio de usuario em um Windows: C:\Users\usuarioadmin
 
 ### Algumas telas que foram implementadas
 

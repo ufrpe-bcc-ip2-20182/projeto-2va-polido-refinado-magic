@@ -78,6 +78,15 @@ public abstract class ValidationUtils
         return null;
     }
 
+    public static boolean idcerto(Conta conta, String id)
+    {
+        if(conta.getId().equals(id))
+        {
+            return true;
+        }
+        return false;
+    }
+
     private static String removerUmaParte(String vetor)
     {
         String [] aux = cortarEspacos(vetor);
