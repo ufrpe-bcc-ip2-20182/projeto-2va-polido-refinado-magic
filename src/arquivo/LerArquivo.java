@@ -3,10 +3,9 @@ package arquivo;
 import beans.Boleto;
 import beans.Conta;
 import beans.Sistema;
-import util.DateUtils;
+import util.DateandGenerateUtils;
 
 import java.io.*;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -51,12 +50,12 @@ public class LerArquivo
 
                     //data de nascimento
                     aux = leitor.readLine();
-                    data = DateUtils.converterData(aux);
+                    data = DateandGenerateUtils.converterData(aux);
                     novaConta.setDatadenascimento(data);
 
                     //data de criação
                     aux = leitor.readLine();
-                    data = DateUtils.converterData(aux);
+                    data = DateandGenerateUtils.converterData(aux);
                     novaConta.setDataDeCriacao(data);
                     /*try {
                         data = f.parse(leitor.readLine());
@@ -74,12 +73,12 @@ public class LerArquivo
 
 
                         //data = f.parse(leitor.readLine());
-                        data = DateUtils.converterData(leitor.readLine());
+                        data = DateandGenerateUtils.converterData(leitor.readLine());
 
 
                     novoBoleto.setDataDeCriacao(data);
 
-                    data = DateUtils.converterData(leitor.readLine());
+                    data = DateandGenerateUtils.converterData(leitor.readLine());
 
                     novoBoleto.setDataDeVencimento(data);
                     novoBoleto.setValor(Double.parseDouble(leitor.readLine()));

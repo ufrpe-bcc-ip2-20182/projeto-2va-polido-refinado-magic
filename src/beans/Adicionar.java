@@ -1,6 +1,6 @@
 package beans;
 
-import util.DateUtils;
+import util.DateandGenerateUtils;
 import util.ValidationUtils;
 
 import java.text.ParseException;
@@ -36,14 +36,14 @@ public class Adicionar
         Date data = null;
         try
         {
-            data = dateFormat.parse(DateUtils.getDiadeHoje());
+            data = dateFormat.parse(DateandGenerateUtils.getDiadeHoje());
         }
         catch (ParseException e) {
             e.printStackTrace();
         }
         bol.setDataDeCriacao(data);
         System.out.print("Digite a Data de Vencimento (formato 'dd/mm/aaaa'): ");
-        data = DateUtils.pegarData();
+        data = DateandGenerateUtils.pegarData();
         bol.setDataDeVencimento(data);
         return bol;
     }
@@ -76,7 +76,7 @@ public class Adicionar
         }
         while (!fluxo);*/
         System.out.print("Digite sua Data de Nascimento (formato 'dd/mm/aaaa'): ");
-        Date data = DateUtils.pegarData();
+        Date data = DateandGenerateUtils.pegarData();
         nova.setDatadenascimento(data);
         System.out.println("Digite um login: ");
         //verificação se o login já existe
@@ -100,7 +100,7 @@ public class Adicionar
         Date dataaux = null;
         try
         {
-            dataaux = dateFormat.parse(DateUtils.getDiadeHoje());
+            dataaux = dateFormat.parse(DateandGenerateUtils.getDiadeHoje());
         }
         catch (ParseException e)
         {
@@ -108,15 +108,5 @@ public class Adicionar
         }
         nova.setDataDeCriacao(dataaux);
         return nova;
-    }
-    public void gerarId(Conta conta)
-    {
-        String aux = conta.getNome();
-        String nova = aux.substring(aux.length(),aux.length()-2); //pega 2 ultimos caracteres
-        Date x = conta.getDatadenascimento();
-        String aux2 = x.toString();
-        aux2 = aux2.substring(3,5); //pega o mes
-        aux = nova + aux2; //junta tudo e gera o id
-        conta.setId(aux);
     }
 }

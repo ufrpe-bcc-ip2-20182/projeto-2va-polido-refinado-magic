@@ -1,12 +1,14 @@
 package util;
 
+import beans.Conta;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
-public class DateUtils
+public class DateandGenerateUtils
 {
     public static String getDiadeHoje()
     {
@@ -21,6 +23,18 @@ public class DateUtils
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         return formatter.format(hoje);
     }
+
+    public void gerarId(Conta conta)
+    {
+        String aux = conta.getNome();
+        String nova = aux.substring(aux.length(),aux.length()-2); //pega 2 ultimos caracteres
+        Date x = conta.getDatadenascimento();
+        String aux2 = x.toString();
+        aux2 = aux2.substring(3,5); //pega o mes
+        aux = nova + aux2; //junta tudo e gera o id
+        conta.setId(aux);
+    }
+
 
     public static Date converterData(String data)
     {
