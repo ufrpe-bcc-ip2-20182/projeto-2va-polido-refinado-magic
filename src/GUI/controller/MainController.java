@@ -69,7 +69,7 @@ public class MainController {
         Stage stage = null;
         Parent root = null;
         //boolean loginOk = false;
-        //int indice = -1;
+        int indice = -1;
 
         sistema = lerArquivo.ler(arquivo.getArquivo());
         contas = sistema.getContas();
@@ -88,6 +88,13 @@ public class MainController {
                 }
             }
 
+            for(int i=0;i<contas.size();i++)
+            {
+                if(contas.get(i).getLogin().equals(login) && contas.get(i).getSenha().equals(senha)){
+                    indice = i;
+                }
+            }
+
             if(logado)
             {
                 stage = (Stage) loginButton.getScene().getWindow();
@@ -101,9 +108,10 @@ public class MainController {
                 alert.setContentText("Usuário não encontrado");
                 alert.showAndWait();
             }
+            ArquivoContas arquivoContas = new ArquivoContas();
+            SalvarConta.salvar(arquivoContas.getArquivo(),indice);
 //            if(loginOk){
-//                ArquivoContas arquivoContas = new ArquivoContas();
-//                SalvarConta.salvar(arquivoContas.getArquivo(),indice);
+//
 //
 //                userField.clear();
 //                passwordField.clear();
