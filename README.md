@@ -19,6 +19,8 @@ Um programa que auxilia o usuário com seus gastos (sejam mensais ou semanais), 
 - Cadastro
 - Mudar Senha
 - Adicionar Pagamento
+- Excluir Conta
+- Excluir Pagamento
 
 ### Diagrama de Classes
 Veja o diagrama [aqui](https://drive.google.com/open?id=1nYKXyGROEK1R7LwuO4a2d_JQd2xsMaus)

@@ -4,6 +4,7 @@ import GUI.MainJavaFX;
 import arquivo.Arquivo;
 import arquivo.LerArquivo;
 import arquivo.SalvarArquivo;
+import beans.Boleto;
 import beans.Conta;
 import beans.Sistema;
 import controller.ArquivoContas;
@@ -37,9 +38,7 @@ public class MudarSenhaController {
     @FXML Button addButton;
 
     public void initialize(){
-        sistema = lerArquivo.ler(arquivo.getArquivo());
         this.sis = MainJavaFX.getInstance();
-        contas = sistema.getContas();
 
         this.passField.setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.ENTER) {
@@ -73,6 +72,7 @@ public class MudarSenhaController {
             e.printStackTrace();
         }
 
+        ArrayList<Boleto> boletos = sistema.getContas().get(indice).getBoletos();
         Conta conta = contas.get(indice);
 
         String senha, senha2, senhaAntes;
@@ -81,7 +81,7 @@ public class MudarSenhaController {
         senha2 = pass2Field.getText();
         if( (senhaAntes.equals(conta.getSenha())) && (senha.equals(senha2) && (!senha.equals(conta.getSenha())) ) ){
 
-            if( (!senha.equals("<NOVA-CONTA>")) && (!senha.equals("NOVO-BOLETO>")) && (!senha.equals("<FIM-BOLETO>")) && (!senha.equals("<FIM-CONTA>")) && (!senha.equals("<FIM-ARQUIVO>")) )
+            if( (!senha.equals("<NOVA-CONTA>")) && (!senha.equals("<NOVO-BOLETO>")) && (!senha.equals("<FIM-BOLETO>")) && (!senha.equals("<FIM-CONTA>")) && (!senha.equals("<FIM-ARQUIVO>")) )
             {
                senhaOk = true;
             }
@@ -102,9 +102,11 @@ public class MudarSenhaController {
 
         if(senhaOk)
         {
-            //sistema.getContas().get(indice).getBoletos();
             sistema.getContas().get(indice).setSenha(senha);
-
+            for(int i=0;i<boletos.size();i++)
+            {
+                sistema.getContas().get(indice).setBoletos(boletos.get(i));
+            }
             SalvarArquivo salvarArquivo = new SalvarArquivo();
             salvarArquivo.salvar(sistema, arquivo.getArquivo());
             passAntiga.clear();
