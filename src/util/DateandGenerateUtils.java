@@ -24,7 +24,7 @@ public class DateandGenerateUtils
         return formatter.format(hoje);
     }
 
-    public void gerarId(Conta conta)
+    public static void gerarId(Conta conta)
     {
         String aux = conta.getNome();
         String nova = aux.substring(aux.length(),aux.length()-2); //pega 2 ultimos caracteres
@@ -34,7 +34,6 @@ public class DateandGenerateUtils
         aux = nova + aux2; //junta tudo e gera o id
         conta.setId(aux);
     }
-
 
     public static Date converterData(String data)
     {

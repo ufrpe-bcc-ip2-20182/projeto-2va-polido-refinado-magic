@@ -232,6 +232,7 @@ public class CadastroController {
             novaConta.setSenha(senha);
             novaConta.setSaldo(valor);
             this.sistema.addContas(novaConta);
+            DateandGenerateUtils.gerarId(novaConta);
 
             nomeField.clear();
             passField.clear();
