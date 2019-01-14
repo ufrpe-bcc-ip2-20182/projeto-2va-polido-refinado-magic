@@ -18,7 +18,7 @@ public class ApagarPagamentoController {
 
     public void initialize(){
 
-        this.apagarPagButton.setOn(new EventHandler<ActionEvent>() {
+        this.apagarPagButton.setOnButton(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 cadastro();
