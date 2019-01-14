@@ -27,7 +27,7 @@ public class DateandGenerateUtils
     public static void gerarId(Conta conta)
     {
         String aux = conta.getNome();
-        String nova = aux.substring(aux.length(),aux.length()-2); //pega 2 ultimos caracteres
+        String nova = aux.substring(aux.length()-2,aux.length()); //pega 2 ultimos caracteres
         Date x = conta.getDatadenascimento();
         String aux2 = x.toString();
         aux2 = aux2.substring(3,5); //pega o mes

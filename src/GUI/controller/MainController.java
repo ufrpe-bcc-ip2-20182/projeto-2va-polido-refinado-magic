@@ -33,17 +33,23 @@ public class MainController {
 
     private String user;
 
-    private Sistema sistema = new Sistema();
-    private Arquivo arquivo = new Arquivo();
+    private Sistema sistema;
+    private Arquivo arquivo;
     private LerArquivo lerArquivo = new LerArquivo();
     private ArrayList<Conta> contas;
-    private ArrayList<String> logins = new ArrayList<>();
-    private ArrayList<String> senhas = new ArrayList<>();
+//    private ArrayList<String> logins = new ArrayList<>();
+//    private ArrayList<String> senhas = new ArrayList<>();
+    private boolean logado;
 
     public void initialize(){
-        sistema = lerArquivo.ler(arquivo.getArquivo());
+        this.sistema = new Sistema();
+        this.arquivo = new Arquivo();
+        logado = false;
+
+
+        //sistema = lerArquivo.ler(arquivo.getArquivo());
         this.sis = MainJavaFX.getInstance();
-        contas = sistema.getContas();
+        //contas = sistema.getContas();
 
         this.passwordField.setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.ENTER) {
@@ -59,39 +65,35 @@ public class MainController {
     }
 
     private void login(){
+
         Stage stage = null;
         Parent root = null;
-        boolean loginOk = false;
-        String login;
-        String senha;
-        int indice = -1;
+        //boolean loginOk = false;
+        //int indice = -1;
 
         sistema = lerArquivo.ler(arquivo.getArquivo());
         contas = sistema.getContas();
+        String login = userField.getText();
+        String senha = passwordField.getText();
 
         try{
-            for (int i = 0; i < contas.size(); i++){
-                logins.add(contas.get(i).getLogin());
-                senhas.add(contas.get(i).getSenha());
-                System.out.println(logins.get(i)+" "+senhas.get(i));
-            }
-            login = userField.getText();
-            if(logins.contains(login))
-            {
-                indice = logins.indexOf(login);
-                senha = passwordField.getText();
-
-                if(senhas.indexOf(senha)==indice){
-                    stage = (Stage) loginButton.getScene().getWindow();
-                    root = (Parent) FXMLLoader.load(getClass().getResource("/GUI/view/Logado.fxml"));
-                    loginOk = true;
-                }else{
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Falha de Login");
-                    alert.setHeaderText("Informações inválidas");
-                    alert.setContentText("Senha incorreta");
-                    alert.showAndWait();
+//            for (int i = 0; i < contas.size(); i++){
+//                logins.add(contas.get(i).getLogin());
+//                senhas.add(contas.get(i).getSenha());
+//                System.out.println(logins.get(i)+" "+senhas.get(i));
+//            }
+            for(Conta c: this.contas){
+                if(c.getLogin().equals(login) && c.getSenha().equals(senha)){
+                    logado = true;
                 }
+            }
+
+            if(logado)
+            {
+                stage = (Stage) loginButton.getScene().getWindow();
+                root = (Parent) FXMLLoader.load(getClass().getResource("/GUI/view/Logado.fxml"));
+                //loginOk = true;
+                MainJavaFX.changeScreen("logado");
             }else{
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Falha de Login");
@@ -99,15 +101,15 @@ public class MainController {
                 alert.setContentText("Usuário não encontrado");
                 alert.showAndWait();
             }
-            if(loginOk){
-                ArquivoContas arquivoContas = new ArquivoContas();
-                SalvarConta.salvar(arquivoContas.getArquivo(),indice);
-
-                userField.clear();
-                passwordField.clear();
-
-                MainJavaFX.changeScreen("logado");
-            }
+//            if(loginOk){
+//                ArquivoContas arquivoContas = new ArquivoContas();
+//                SalvarConta.salvar(arquivoContas.getArquivo(),indice);
+//
+//                userField.clear();
+//                passwordField.clear();
+//
+//                MainJavaFX.changeScreen("logado");
+//            }
         }catch(IOException e){
             e.printStackTrace();
         }

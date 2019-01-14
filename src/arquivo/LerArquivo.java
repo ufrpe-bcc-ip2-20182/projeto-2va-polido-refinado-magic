@@ -37,6 +37,9 @@ public class LerArquivo
             try
             {
                 input = leitor.readLine();
+                if(novaConta == null){
+                    novaConta = new Conta();
+                }
                 if ("<NOVA-CONTA>".equals(input)) {
                     String aux = leitor.readLine();
 
@@ -93,10 +96,12 @@ public class LerArquivo
                 else if (input.equals("<FIM-CONTA>"))
                 {
                     sistema.addContas(novaConta);
+
                     if(novaConta.getBoletos() != null)
                     {
                         novaConta.limparBoletos();//o set de conta para boletos faz que todos os boletos inseridos sejam deletados
                     }
+                    novaConta = null;
                 }
                 else
                 {

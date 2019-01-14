@@ -182,7 +182,7 @@ public class AddController {
 
             Alert alert5 = new Alert(Alert.AlertType.CONFIRMATION);
             alert5.setTitle("Aviso");
-            alert5.setHeaderText("Boleto adicionado com sucesso!");
+            alert5.setHeaderText("Pagamento adicionado com sucesso!");
             SalvarArquivo salvarArquivo = new SalvarArquivo();
 
             salvarArquivo.salvar(sistema, arquivo.getArquivo());
