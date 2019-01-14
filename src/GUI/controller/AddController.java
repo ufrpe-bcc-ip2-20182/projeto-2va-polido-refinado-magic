@@ -154,9 +154,13 @@ public class AddController {
             novoBoleto.setDataDeCriacao(data);
             novoBoleto.setDataDeVencimento(data2);
             double pagar = sistema.getContas().get(indice).getSaldo();
-            if(pagar-valor >= 0 && pagoBox.isSelected())
+            if(pagar-valor >= 0)
             {
-                sistema.getContas().get(indice).setSaldo(pagar-valor);
+                if(pagoBox.isSelected())
+                {
+                    sistema.getContas().get(indice).setSaldo(pagar-valor);
+                }
+
             }
             else
             {
