@@ -18,7 +18,7 @@ public class MainJavaFX extends Application {
         return instance;
     }
 
-    private static Stage primaryStage;
+    private Stage primaryStage;
     private static Stage stage;
     private static Scene sceneLogin;
     private static Scene sceneCadastro;

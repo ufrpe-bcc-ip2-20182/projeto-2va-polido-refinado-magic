@@ -32,7 +32,6 @@ public class MainController {
     @FXML private Button loginButton;
 
     private String user;
-    private String pass;
 
     private Sistema sistema = new Sistema();
     private Arquivo arquivo = new Arquivo();
@@ -45,10 +44,6 @@ public class MainController {
         sistema = lerArquivo.ler(arquivo.getArquivo());
         this.sis = MainJavaFX.getInstance();
         contas = sistema.getContas();
-
-        //casos de teste
-        this.user = "adm";
-        this.pass = "123";
 
         this.passwordField.setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.ENTER) {
