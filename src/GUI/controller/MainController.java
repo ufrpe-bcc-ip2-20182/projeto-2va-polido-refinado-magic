@@ -102,6 +102,9 @@ public class MainController {
                 ArquivoContas arquivoContas = new ArquivoContas();
                 SalvarConta.salvar(arquivoContas.getArquivo(),indice);
 
+                userField.clear();
+                passwordField.clear();
+
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 String tituloAtual = stage.getTitle();
