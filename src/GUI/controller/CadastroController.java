@@ -67,7 +67,7 @@ public class CadastroController {
         Parent root = null;
         boolean cadastroOk = false;
 
-        sistema = lerArquivo.ler(arquivo.getArquivo());
+        sistema = LerArquivo.ler(arquivo.getArquivo());
         contas = sistema.getContas();
 
         String nome;
