@@ -249,6 +249,7 @@ public class CadastroController {
             alert5.setHeaderText("Cadastro Realizado com Sucesso");
             alert5.getOnCloseRequest();
             alert5.showAndWait();
+            MainJavaFX.changeScreen("login");
         }
 
     }
