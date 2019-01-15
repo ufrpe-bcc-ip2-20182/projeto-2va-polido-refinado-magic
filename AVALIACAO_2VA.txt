@@ -1,0 +1,12 @@
+--------------------------------------------------
+AVALIACAO:
+--------------------------------------------------
+Interface com o Usuario (2,0):              1,5 
+Funcionalidades (3,0):                      2,0
+Comentários / Qualidade do Código (2,5):    2,5
+Validações de dados (1,0):                  1,0 
+Originalidade (0,5):                        0,5
+Entregas Parciais (1,0):		                1,0
+--------------------------------------------------
+Obs: 
+- Não foi disponibilizado um jar (executável)
